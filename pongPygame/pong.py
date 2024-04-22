@@ -23,7 +23,7 @@ def main():
     isfont = False  # 字体是否存在
     ispause = False  # 是否暂停
     isfail = False
-    score = 114514  # 分数
+    score = 0  # 分数
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Pong Pygame program")
