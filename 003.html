@@ -11,7 +11,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<meta name="mobile-web-app-capable" content="yes" />
-		<title>Python 实验报告 - 2</title>
+		<title>Python 实验报告 - 3</title>
 		<link rel="icon" type="image/png" href="https://hackmd.io/favicon.png" />
 		<link
 			rel="apple-touch-icon"
@@ -1319,16 +1319,16 @@
 	<body>
 		<div
 			id="doc"
-			class="markdown-body container-fluid comment-enabled comment-inner"
+			class="markdown-body container-fluid comment-inner comment-enabled"
 			data-hard-breaks="true"
 		>
-			<h1 id="Python-实验报告-2" data-id="Python-实验报告-2">
+			<h1 id="Python-实验报告-3" data-id="Python-实验报告-3">
 				<a
 					class="anchor hidden-xs"
-					href="#Python-实验报告-2"
-					title="Python-实验报告-2"
+					href="#Python-实验报告-3"
+					title="Python-实验报告-3"
 					><span class="octicon octicon-link"></span></a
-				><span>Python 实验报告 - 2</span>
+				><span>Python 实验报告 - 3</span>
 			</h1>
 			<p>
 				<span>学号：2022214207</span><br />
@@ -1339,191 +1339,250 @@
 			<p>
 				<span>本文链接：</span
 				><a
-					href="https://blackishgreen33.github.io/CCNU-Python/002.html"
+					href="https://blackishgreen33.github.io/CCNU-Python/003.html"
 					target="_blank"
 					rel="noopener"
 					><span
-						>https://blackishgreen33.github.io/CCNU-Python/002.html</span
+						>https://blackishgreen33.github.io/CCNU-Python/003.html</span
 					></a
 				>
 			</p>
-			<h2
-				id="Python-中在持久化对象时使用-JSON-和-Pickle-有什么差异-？"
-				data-id="Python-中在持久化对象时使用-JSON-和-Pickle-有什么差异-？"
-			>
+			<h2 id="实验目的" data-id="实验目的">
+				<a class="anchor hidden-xs" href="#实验目的" title="实验目的"
+					><span class="octicon octicon-link"></span></a
+				><span>实验目的</span>
+			</h2>
+			<p><span>要求：修改游戏代码，实现以下功能</span></p>
+			<p><span>（1）球拍放在下方</span></p>
+			<p>
+				<span>（2）控制方式改为 </span><strong><span>鼠标移动</span></strong
+				><span> 或者 </span><strong><span>左右方向键</span></strong>
+			</p>
+			<p>
+				<span>源代码：参见 </span
+				><a
+					href="https://tuxinhui.notion.site/4-PyGame-5c7c86590cba48b3bfda56a1c75f6aaf"
+					target="_blank"
+					rel="noopener"
+					><span>实验课文档</span></a
+				>
+			</p>
+			<h3 id="注意事项" data-id="注意事项">
+				<a class="anchor hidden-xs" href="#注意事项" title="注意事项"
+					><span class="octicon octicon-link"></span></a
+				><span>注意事项</span>
+			</h3>
+			<p>
+				<span>我这边修改了 </span><code>racket</code><span> 类中 </span
+				><code>rkwh</code><span> 这属性的名称，改写为 </span><code>rktw</code
+				><span> 。我不知道为什么原本作者要写为 </span><code>rkwh</code
+				><span> ，可能有什么特别意思，反正我是不太懂。</span>
+			</p>
+			<p>
+				<span>这边改写作 </span><code>rktw</code
+				><span> 就很直观能了解说代表 racket width，因此本报告接下来将都以 </span
+				><code>rktw</code><span> 取代原属性名。</span>
+			</p>
+			<h2 id="实现球拍放在下方" data-id="实现球拍放在下方">
 				<a
 					class="anchor hidden-xs"
-					href="#Python-中在持久化对象时使用-JSON-和-Pickle-有什么差异-？"
-					title="Python-中在持久化对象时使用-JSON-和-Pickle-有什么差异-？"
+					href="#实现球拍放在下方"
+					title="实现球拍放在下方"
 					><span class="octicon octicon-link"></span></a
-				><span>Python 中在持久化对象时使用 JSON 和 Pickle 有什么差异 ？</span>
+				><span>实现球拍放在下方</span>
 			</h2>
-			<p>
-				<span
-					>在 Python 中，JSON（JavaScript Object Notation）和 Pickle
-					是两种常用的持久化对象的方式。</span
-				>
-			</p>
-			<h3 id="特点比较" data-id="特点比较">
-				<a class="anchor hidden-xs" href="#特点比较" title="特点比较"
+			<h3 id="球拍位置" data-id="球拍位置">
+				<a class="anchor hidden-xs" href="#球拍位置" title="球拍位置"
 					><span class="octicon octicon-link"></span></a
-				><span>特点比较</span>
-			</h3>
-			<p><span>它们之间主要有以下几个差异：</span></p>
-			<p><span>序列化格式方面：</span></p>
-			<ul>
-				<li><span>JSON 是一种文本格式，而 Pickle 是一种二进制格式。</span></li>
-				<li>
-					<span
-						>JSON 使用可读性较好的纯文本表示对象，而 Pickle 使用 Python
-						特定的二进制格式。</span
-					>
-				</li>
-			</ul>
-			<p><span>可读性方面：</span></p>
-			<ul>
-				<li>
-					<span
-						>JSON 由于是文本格式，所以序列化后的 JSON
-						数据是可读的，并且可以被其他编程语言解析。</span
-					>
-				</li>
-				<li>
-					<span>Pickle 生成的二进制数据不可读，只能由 Python 解析。</span>
-				</li>
-			</ul>
-			<p><span>数据类型支持方面：</span></p>
-			<ul>
-				<li>
-					<span
-						>JSON
-						可以序列化基本的数据类型（如字符串、数字、布尔值）、列表、字典和嵌套结构的组合。但是，JSON
-						不支持所有的 Python
-						对象类型，例如，它不能直接序列化自定义类的实例。</span
-					>
-				</li>
-				<li>
-					<span
-						>Pickle 能够序列化几乎所有的 Python
-						对象，包括自定义类的实例、函数、模块等。</span
-					>
-				</li>
-			</ul>
-			<p><span>安全性方面：</span></p>
-			<ul>
-				<li>
-					<span>JSON 由于是文本格式，它相对较安全，不会执行任意代码。</span>
-				</li>
-				<li>
-					<span
-						>Pickle 是一种 Python 特定的格式，反序列化 Pickle
-						数据时存在风险，因为恶意 Pickle 数据可以包含可执行的代码。</span
-					>
-				</li>
-			</ul>
-			<p><span>跨平台兼容性方面：</span></p>
-			<ul>
-				<li>
-					<span
-						>JSON
-						是一种通用的数据交换格式，它在不同编程语言和平台之间具有良好的兼容性。</span
-					>
-				</li>
-				<li>
-					<span>Pickle 是 Python 特有的格式，不适用于与其他编程语言交互。</span>
-				</li>
-			</ul>
-			<h3 id="小结" data-id="小结">
-				<a class="anchor hidden-xs" href="#小结" title="小结"
-					><span class="octicon octicon-link"></span></a
-				><span>小结</span>
+				><span>球拍位置</span>
 			</h3>
 			<p>
 				<span
-					>如果需要在 Python 中持久化简单的数据结构或与其他编程语言交互，JSON
-					是一个较好的选择。而对于复杂的 Python
-					对象，或者需要保留对象的状态和行为，以及在 Python 环境中使用，Pickle
-					是更合适的选项。在使用 Pickle 时应注意安全问题，只反序列化可信任的
-					Pickle 数据。</span
+					>要达成这个要求，首先我们需要先将球拍从竖向转为横向，也就是改变 racket
+					类的宽高属性。</span
 				>
 			</p>
-			<h2
-				id="Python-如何实现类似-C-STL-中模板的机制，举例说明。"
-				data-id="Python-如何实现类似-C-STL-中模板的机制，举例说明。"
-			>
-				<a
-					class="anchor hidden-xs"
-					href="#Python-如何实现类似-C-STL-中模板的机制，举例说明。"
-					title="Python-如何实现类似-C-STL-中模板的机制，举例说明。"
-					><span class="octicon octicon-link"></span></a
-				><span>Python 如何实现类似 C++ STL 中模板的机制，举例说明。</span>
-			</h2>
-			<p>
-				<span
-					>在 Python 中，没有直接对应 C++ STL 中的模板机制，因为 Python
-					是一种动态类型语言，它的变量类型是在运行时确定的。不过，Python
-					提供了一些机制，如泛型编程和函数重载，可以实现类似于 C++ STL
-					中模板的一些功能。</span
-				>
-			</p>
-			<h3 id="泛型编程" data-id="泛型编程">
-				<a class="anchor hidden-xs" href="#泛型编程" title="泛型编程"
-					><span class="octicon octicon-link"></span></a
-				><span>泛型编程</span>
-			</h3>
-			<p>
-				<span
-					>Python
-					中的泛型编程可以通过使用类型提示和类型变量来实现。类型提示是一种在变量、函数参数、函数返回值等位置指定类型的语法。通过使用类型变量，可以编写通用的函数和类，以处理多种类型的对象。例如：</span
-				>
-			</p>
-			<pre><code class="python hljs"><span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> <span class="hljs-type">List</span>, T
+			<pre><code class="python hljs"><span class="hljs-comment"># racket.py (修改默认宽高)</span>
+rktw = <span class="hljs-number">100</span>
+rkth = <span class="hljs-number">10</span>
 
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">print_list</span>(<span class="hljs-params">lst: <span class="hljs-type">List</span>[T]</span>) -&gt; <span class="hljs-literal">None</span>:
-    <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> lst:
-        <span class="hljs-built_in">print</span>(item)
-
-<span class="hljs-comment"># 使用泛型函数打印不同类型的列表</span>
-print_list([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>])  <span class="hljs-comment"># 打印整数列表</span>
-print_list([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>])  <span class="hljs-comment"># 打印字符串列表</span>
+<span class="hljs-comment"># pong.py (修改实例化传参的值)</span>
+rkt = racket(CRKT, (<span class="hljs-number">100</span>, <span class="hljs-number">10</span>), <span class="hljs-number">220</span> / FPS, <span class="hljs-string">"img/pingpongbat.png"</span>)
+</code></pre>
+			<p><span>接下来就需要改变球拍一开始放置的位置。</span></p>
+			<pre><code class="python hljs"><span class="hljs-comment"># pong.py</span>
+rkt.rect.x = <span class="hljs-number">0</span>
+rkt.rect.y = HEIGHT - <span class="hljs-number">10</span>
+</code></pre>
+			<p>
+				<span>同时别忘了 racket 类中有个 </span><code>reset</code
+				><span>
+					函数，它在游戏重新开始时负责重置球拍的位置，所以也需要进行修改。</span
+				>
+			</p>
+			<pre><code class="python hljs"><span class="hljs-comment"># racket.py</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">reset</span>(<span class="hljs-params">self</span>):
+    self.rect.y = <span class="hljs-number">630</span> <span class="hljs-comment"># 视窗高度(640) - 球拍厚度(10) </span>
 </code></pre>
 			<p>
 				<span
-					>通过类型提示和类型变量，我们可以编写一次通用的函数，并在不同类型的列表上调用它。</span
+					>这样看似就结束了，但实际运行游戏时就会发现其实还存在很多逻辑问题。例如说球碰到原本的视窗左侧时应当改为反弹、游戏成功与失败判定的边界线应该改至下方等，接下来我们就来继续处里一下这些
+					bugs。</span
 				>
 			</p>
-			<h3 id="函数重载" data-id="函数重载">
-				<a class="anchor hidden-xs" href="#函数重载" title="函数重载"
+			<h3 id="球的反弹" data-id="球的反弹">
+				<a class="anchor hidden-xs" href="#球的反弹" title="球的反弹"
 					><span class="octicon octicon-link"></span></a
-				><span>函数重载</span>
+				><span>球的反弹</span>
 			</h3>
 			<p>
 				<span
-					>Python 中没有像 C++
-					那样的静态函数重载机制，但可以通过使用默认参数值和类型检查来模拟函数重载。例如：</span
+					>依据要求，这个游戏中的球只有两种情况下会反弹，一是碰到上、左、右视窗边界时，二是碰到球拍时。那我们先来处里一下边界的反弹，这部份是在
+					ball 类的 </span
+				><code>update</code><span> 函数中实现的。</span>
+			</p>
+			<pre><code class="python hljs"><span class="hljs-comment"># ball.py</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self</span>):
+    <span class="hljs-comment"># 上边界处理</span>
+    <span class="hljs-keyword">if</span> self.rect.y &lt; <span class="hljs-number">0</span>:
+        self.speedy = -self.speedy
+    <span class="hljs-comment"># 左右边界处理</span>
+    <span class="hljs-keyword">elif</span> (
+        (self.rect.x + self.width) &gt; self.WIDTH
+    ) <span class="hljs-keyword">or</span> self.rect.x &lt; <span class="hljs-number">0</span>:
+        self.speedx = -self.speedx
+    <span class="hljs-comment"># ... [以下省略] ...</span>
+</code></pre>
+			<h3 id="判定界限" data-id="判定界限">
+				<a class="anchor hidden-xs" href="#判定界限" title="判定界限"
+					><span class="octicon octicon-link"></span></a
+				><span>判定界限</span>
+			</h3>
+			<p>
+				<span
+					>接着来处里一下球拍的反弹，这部份和游戏成功与失败判定边界的逻辑同在主函数的碰撞检测中。</span
 				>
 			</p>
-			<pre><code class="python hljs"><span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a: <span class="hljs-built_in">int</span>, b: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">int</span>:
-    <span class="hljs-keyword">return</span> a + b
-
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a: <span class="hljs-built_in">str</span>, b: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">str</span>:
-    <span class="hljs-keyword">return</span> a + b
-
-<span class="hljs-comment"># 调用不同版本的 add 函数</span>
-<span class="hljs-built_in">print</span>(add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>))  <span class="hljs-comment"># 输出 5</span>
-<span class="hljs-built_in">print</span>(add(<span class="hljs-string">'Hello'</span>, <span class="hljs-string">' World'</span>))  <span class="hljs-comment"># 输出 'Hello World'</span>
+			<pre><code class="python hljs"><span class="hljs-comment"># pong.py</span>
+<span class="hljs-keyword">if</span> bball.rect.y + bball.rect.height &gt; HEIGHT - rkt.rect.height:  <span class="hljs-comment"># 下边界</span>
+    <span class="hljs-comment"># 像素遮罩（碰撞）检测</span>
+    <span class="hljs-keyword">if</span> pygame.sprite.collide_mask(bball, rkt):  
+        score += <span class="hljs-number">1</span>
+        bball.speedy = -bball.speedy
+        <span class="hljs-comment"># 避免音频未正确加载导致的程序异常结束</span>
+        <span class="hljs-keyword">if</span> isload:
+            mhit.play()
+    <span class="hljs-comment"># 未击中球拍</span>
+    <span class="hljs-keyword">else</span>:
+        ispause = <span class="hljs-literal">True</span>
+        isfail = <span class="hljs-literal">True</span>
+        <span class="hljs-keyword">if</span> isload:
+            mfail.play()
+</code></pre>
+			<h2
+				id="控制方式改为鼠标移动或者左右方向键"
+				data-id="控制方式改为鼠标移动或者左右方向键"
+			>
+				<a
+					class="anchor hidden-xs"
+					href="#控制方式改为鼠标移动或者左右方向键"
+					title="控制方式改为鼠标移动或者左右方向键"
+					><span class="octicon octicon-link"></span></a
+				><span>控制方式改为鼠标移动或者左右方向键</span>
+			</h2>
+			<p><span>这部份想说两种操作方式都不难，干脆就都做了。</span></p>
+			<h3 id="鼠标移动球拍" data-id="鼠标移动球拍">
+				<a class="anchor hidden-xs" href="#鼠标移动球拍" title="鼠标移动球拍"
+					><span class="octicon octicon-link"></span></a
+				><span>鼠标移动球拍</span>
+			</h3>
+			<p>
+				<span
+					>这边做个动作拆解，也就是说要先监听并获取到鼠标当前的位置，接着改变球拍的位置。</span
+				>
+			</p>
+			<pre><code class="python hljs"><span class="hljs-comment"># pong.py</span>
+<span class="hljs-comment"># 未暂停且未结束的情况下才处理移动</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">not</span> ispause) <span class="hljs-keyword">and</span> (<span class="hljs-keyword">not</span> isfail):
+    <span class="hljs-comment"># 监听鼠标移动事件</span>
+    <span class="hljs-keyword">if</span> event.<span class="hljs-built_in">type</span> == pygame.MOUSEMOTION:
+        rkt.rect.x = event.pos[<span class="hljs-number">0</span>] - rkt.rktw // <span class="hljs-number">2</span> <span class="hljs-comment"># 根据鼠标的水平位置调整球拍的位置</span>
+</code></pre>
+			<p>
+				<span>那可能会想说为什么要 </span><code>- rkt.rktw // 2</code
+				><span
+					>，也就是减去一半的球拍宽度，这是为了让当前鼠标位置保持在球拍中间，不然玩家操作起来感觉会怪怪的。</span
+				>
+			</p>
+			<h3 id="左右方向键移动球拍" data-id="左右方向键移动球拍">
+				<a
+					class="anchor hidden-xs"
+					href="#左右方向键移动球拍"
+					title="左右方向键移动球拍"
+					><span class="octicon octicon-link"></span></a
+				><span>左右方向键移动球拍</span>
+			</h3>
+			<p>
+				<span
+					>最后我们来实现左右方向键移动的功能。那我们一开始要获取到左右方向的触发就必须先
+					import 一下 </span
+				><code>K_a</code><span> 和 </span><code>K_d</code
+				><span>
+					(我这边是用 A 和 D 键操作啦，毕竟原代码是用 W 和 S
+					键，喜欢用左右方向键的也可以 import 一下 </span
+				><code>K_LEFT</code><span> 和 </span><code>K_RIGHT</code
+				><span>)。</span>
+			</p>
+			<pre><code class="python hljs"><span class="hljs-comment"># pong.py</span>
+<span class="hljs-keyword">from</span> pygame.<span class="hljs-built_in">locals</span> <span class="hljs-keyword">import</span> K_SPACE, K_a, K_d
 </code></pre>
 			<p>
 				<span
-					>通过根据参数类型来选择不同的函数实现，我们可以实现类似于函数重载的效果。</span
+					>接着我们移动前要先检查球拍是否可以向左移动，确保球拍在向左移动 </span
+				><code>rkt.rkstep</code
+				><span>
+					个单位后不会超出屏幕左边界，并且检查键盘上的 A
+					键是否被按下，而后右移动的判定同理。</span
+				>
+			</p>
+			<pre><code class="python hljs"><span class="hljs-comment"># pong.py</span>
+<span class="hljs-comment"># 未暂停且未结束的情况下才处理移动</span>
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">not</span> ispause) <span class="hljs-keyword">and</span> (<span class="hljs-keyword">not</span> isfail):
+    <span class="hljs-comment"># ... [鼠标移动球拍] ...</span>
+    <span class="hljs-keyword">if</span> (rkt.rect.x - rkt.rkstep &gt;= <span class="hljs-number">0</span>) <span class="hljs-keyword">and</span> pygame.key.get_pressed()[K_a]:
+        rkt.rect.x = rkt.rect.x - rkt.rkstep
+    <span class="hljs-keyword">if</span> (
+        rkt.rect.x + rkt.rktw + rkt.rkstep &lt;= WIDTH
+    ) <span class="hljs-keyword">and</span> pygame.key.get_pressed()[K_d]:
+        rkt.rect.x = rkt.rect.x + rkt.rkstep
+</code></pre>
+			<p><span>于是我们游戏的修改就大功告成🎉。</span></p>
+			<h2 id="游戏运行截图" data-id="游戏运行截图">
+				<a class="anchor hidden-xs" href="#游戏运行截图" title="游戏运行截图"
+					><span class="octicon octicon-link"></span></a
+				><span>游戏运行截图</span>
+			</h2>
+			<p>
+				<span>修改后的代码在这里：</span
+				><a
+					href="https://github.com/BlackishGreen33/CCNU-Python/tree/main/pongPygame"
+					target="_blank"
+					rel="noopener"
+					><span>GitHub 仓库</span></a
 				>
 			</p>
 			<p>
-				<span
-					>需要注意一点是，这种方法仅在运行时进行类型检查，并不会在编译时捕获类型错误。由于
-					Python
-					的动态特性意味着函数的行为可以在运行时动态改变，因此需要谨慎使用这些技术，以避免引入不必要的复杂性和错误。</span
-				>
+				<span>截图：</span><br />
+				<img
+					src="https://hackmd.io/_uploads/Syqc16XbR.png"
+					alt="114514"
+					loading="lazy"
+				/><br />
+				<img
+					src="https://hackmd.io/_uploads/rkyYlamZ0.png"
+					alt="gameover"
+					loading="lazy"
+				/>
 			</p>
 		</div>
 		<div class="ui-toc dropup unselectable hidden-print" style="display: none">
@@ -1547,37 +1606,50 @@ print_list([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'<
 				>
 					<div class="toc">
 						<ul class="nav">
-							<li class="">
-								<a href="#Python-实验报告" title="Python 实验报告"
-									>Python 实验报告</a
+							<li>
+								<a href="#Python-实验报告---3" title="Python 实验报告 - 3"
+									>Python 实验报告 - 3</a
 								>
 								<ul class="nav">
-									<li class="">
-										<a
-											href="#Python-中在持久化对象时使用-JSON-和-Pickle-有什么差异-？"
-											title="Python 中在持久化对象时使用 JSON 和 Pickle 有什么差异 ？"
-											>Python 中在持久化对象时使用 JSON 和 Pickle 有什么差异
-											？</a
-										>
+									<li>
+										<a href="#实验目的" title="实验目的">实验目的</a>
 										<ul class="nav">
-											<li class="">
-												<a href="#特点比较" title="特点比较">特点比较</a>
-											</li>
-											<li class=""><a href="#小结" title="小结">小结</a></li>
+											<li><a href="#注意事项" title="注意事项">注意事项</a></li>
 										</ul>
 									</li>
-									<li class="">
-										<a
-											href="#Python-如何实现类似-C-STL-中模板的机制，举例说明。"
-											title="Python 如何实现类似 C++ STL 中模板的机制，举例说明。"
-											>Python 如何实现类似 C++ STL 中模板的机制，举例说明。</a
+									<li>
+										<a href="#实现球拍放在下方" title="实现球拍放在下方"
+											>实现球拍放在下方</a
 										>
 										<ul class="nav">
-											<li class="">
-												<a href="#泛型编程" title="泛型编程">泛型编程</a>
-											</li>
-											<li><a href="#函数重载" title="函数重载">函数重载</a></li>
+											<li><a href="#球拍位置" title="球拍位置">球拍位置</a></li>
+											<li><a href="#球的反弹" title="球的反弹">球的反弹</a></li>
+											<li><a href="#判定界限" title="判定界限">判定界限</a></li>
 										</ul>
+									</li>
+									<li>
+										<a
+											href="#控制方式改为鼠标移动或者左右方向键"
+											title="控制方式改为鼠标移动或者左右方向键"
+											>控制方式改为鼠标移动或者左右方向键</a
+										>
+										<ul class="nav">
+											<li>
+												<a href="#鼠标移动球拍" title="鼠标移动球拍"
+													>鼠标移动球拍</a
+												>
+											</li>
+											<li>
+												<a href="#左右方向键移动球拍" title="左右方向键移动球拍"
+													>左右方向键移动球拍</a
+												>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#游戏运行截图" title="游戏运行截图"
+											>游戏运行截图</a
+										>
 									</li>
 								</ul>
 							</li>
@@ -1599,36 +1671,48 @@ print_list([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'<
 		>
 			<div class="toc">
 				<ul class="nav">
-					<li class="">
-						<a href="#Python-实验报告" title="Python 实验报告"
-							>Python 实验报告</a
+					<li>
+						<a href="#Python-实验报告---3" title="Python 实验报告 - 3"
+							>Python 实验报告 - 3</a
 						>
 						<ul class="nav">
-							<li class="">
-								<a
-									href="#Python-中在持久化对象时使用-JSON-和-Pickle-有什么差异-？"
-									title="Python 中在持久化对象时使用 JSON 和 Pickle 有什么差异 ？"
-									>Python 中在持久化对象时使用 JSON 和 Pickle 有什么差异 ？</a
-								>
+							<li>
+								<a href="#实验目的" title="实验目的">实验目的</a>
 								<ul class="nav">
-									<li class="">
-										<a href="#特点比较" title="特点比较">特点比较</a>
-									</li>
-									<li class=""><a href="#小结" title="小结">小结</a></li>
+									<li><a href="#注意事项" title="注意事项">注意事项</a></li>
 								</ul>
 							</li>
-							<li class="">
-								<a
-									href="#Python-如何实现类似-C-STL-中模板的机制，举例说明。"
-									title="Python 如何实现类似 C++ STL 中模板的机制，举例说明。"
-									>Python 如何实现类似 C++ STL 中模板的机制，举例说明。</a
+							<li>
+								<a href="#实现球拍放在下方" title="实现球拍放在下方"
+									>实现球拍放在下方</a
 								>
 								<ul class="nav">
-									<li class="">
-										<a href="#泛型编程" title="泛型编程">泛型编程</a>
-									</li>
-									<li><a href="#函数重载" title="函数重载">函数重载</a></li>
+									<li><a href="#球拍位置" title="球拍位置">球拍位置</a></li>
+									<li><a href="#球的反弹" title="球的反弹">球的反弹</a></li>
+									<li><a href="#判定界限" title="判定界限">判定界限</a></li>
 								</ul>
+							</li>
+							<li>
+								<a
+									href="#控制方式改为鼠标移动或者左右方向键"
+									title="控制方式改为鼠标移动或者左右方向键"
+									>控制方式改为鼠标移动或者左右方向键</a
+								>
+								<ul class="nav">
+									<li>
+										<a href="#鼠标移动球拍" title="鼠标移动球拍"
+											>鼠标移动球拍</a
+										>
+									</li>
+									<li>
+										<a href="#左右方向键移动球拍" title="左右方向键移动球拍"
+											>左右方向键移动球拍</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#游戏运行截图" title="游戏运行截图">游戏运行截图</a>
 							</li>
 						</ul>
 					</li>
