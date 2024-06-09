@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Python 期末论文 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{background-color:#eaffea;color:#55a532}.hljs-deletion{background-color:#ffecec;color:#bd2c00}.hljs-link{text-decoration:underline}.markdown-body{word-wrap:break-word;font-size:16px;line-height:1.5}.markdown-body:after,.markdown-body:before{content:"";display:table}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-bottom:16px;margin-top:0}.markdown-body hr{background-color:#e7e7e7;border:0;height:.25em;margin:24px 0;padding:0}.markdown-body blockquote{border-left:.25em solid #ddd;color:#777;font-size:16px;padding:0 1em}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb;color:#555;display:inline-block;font-size:11px;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{border-bottom:1px solid #eee;padding-bottom:.3em}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{color:#777;font-size:.85em}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{list-style-type:none;padding:0}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-bottom:0;margin-top:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{font-size:1em;font-style:italic;font-weight:700;margin-top:16px;padding:0}.markdown-body dl dd{margin-bottom:16px;padding:0 16px}.markdown-body table{display:block;overflow:auto;width:100%;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{border:1px solid #ddd;padding:6px 13px}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{background-color:#fff;box-sizing:initial;max-width:100%}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{background-color:initial;max-width:none;vertical-align:text-top}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{border:1px solid #ddd;display:block;float:left;margin:13px 0 0;overflow:hidden;padding:7px;width:auto}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0}.markdown-body span.align-center{clear:both;display:block;overflow:hidden}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{clear:both;display:block;overflow:hidden}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{background-color:#0000000a;border-radius:3px;font-size:85%;margin:0;padding:.2em 0}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{content:"\00a0";letter-spacing:-.2em}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{background:#0000;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{border-radius:3px;font-size:85%;line-height:1.45;overflow:auto}.markdown-body:not(.next-editor) pre{background-color:#f7f7f7;padding:16px}.markdown-body pre code,.markdown-body pre tt{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{background:#fff;border:0;padding:10px 8px 9px;text-align:right}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{background:#f8f8f8;border-top:0;font-weight:700}.news .alert .markdown-body blockquote{border:0;padding:0 0 0 40px}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{cursor:default!important;float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle}.markdown-alert{border-left-style:solid;border-left-width:4px;color:inherit;margin-bottom:16px;padding:8px 16px}.markdown-alert .markdown-alert-title{align-items:center;display:flex;font-weight:500;line-height:1;white-space:break-spaces}.markdown-body .markdown-alert>*{margin-bottom:0;margin-top:16px}.markdown-body .markdown-alert .selection-popover,.markdown-body .markdown-alert>:first-child{margin-top:0}.markdown-alert.markdown-alert-note{border-left-color:#0969da}.markdown-alert.markdown-alert-note .markdown-alert-title{fill:currentColor;color:#0969da}.markdown-alert.markdown-alert-tip{border-left-color:#1a7f37}.markdown-alert.markdown-alert-tip .markdown-alert-title{fill:currentColor;color:#1a7f37}.markdown-alert.markdown-alert-important{border-left-color:#8250df}.markdown-alert.markdown-alert-important .markdown-alert-title{fill:currentColor;color:#8250df}.markdown-alert.markdown-alert-warning{border-left-color:#9a6700}.markdown-alert.markdown-alert-warning .markdown-alert-title{fill:currentColor;color:#9a6700}.markdown-alert.markdown-alert-caution{border-left-color:#d1242f}.markdown-alert.markdown-alert-caution .markdown-alert-title{fill:currentColor;color:#d1242f}.markdown-body{max-width:758px;overflow:visible!important;padding-bottom:40px;padding-top:40px;position:relative}.markdown-body.next-editor{overflow-x:hidden!important}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{border-right:3px solid #6ce26c!important;box-sizing:initial;color:#afafaf!important;cursor:default;display:inline-block;min-width:20px;padding:0 8px 0 0;position:relative;text-align:right;z-index:4}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-bottom:none;border-left:none;border-top:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-collapse:inherit!important;border-spacing:0}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{margin-bottom:unset;overflow:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert{display:flex;flex-direction:column;gap:16px}.markdown-body .alert>*{margin:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{background-color:inherit;border-radius:0;overflow:visible;text-align:center;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{height:100%;max-width:100%}.markdown-body pre>code.wrap{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}.markdown-body pre.pseudocode{white-space-collapse:collapse}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{background-color:#000;background-position:50%;background-repeat:no-repeat;background-size:contain;cursor:pointer;display:table;overflow:hidden;text-align:center}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{object-fit:contain;width:100%;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{height:100%;left:0;position:absolute;top:0;width:100%}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{color:#fff;height:auto;left:50%;opacity:.3;position:absolute;top:50%;transform:translate(-50%,-50%);transition:opacity .2s;width:auto;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.figma{display:table;padding-bottom:56.25%;position:relative;width:100%}.figma iframe{border:1px solid #eee;bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.markmap-container{height:300px}.markmap-container>svg{height:100%;width:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{color:#777;margin:25px auto -25px;max-width:760px;position:relative;z-index:2}.toc .invisable-node{list-style-type:none}.ui-toc{bottom:20px;position:fixed;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{border-bottom-left-radius:0;border-top-left-radius:0;height:40px;padding:10px 4px}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{color:#fff;opacity:1;transition:opacity .2s}.ui-toc-label:focus{background-color:#ccc;color:#000;opacity:.3}.ui-toc-label:hover{background-color:#ccc;opacity:1;transition:opacity .2s}.ui-toc-dropdown{margin-bottom:20px;margin-top:20px;max-height:70vh;max-width:45vw;overflow:auto;padding-left:10px;padding-right:10px;text-align:inherit;width:25vw}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{letter-spacing:.0029em;padding-right:0}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{color:#767676;display:block;font-size:13px;font-weight:500;padding:4px 20px}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{background-color:initial;border-left:1px solid #000;color:#000;padding-left:19px;text-decoration:none}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{border-left:none;border-right:1px solid #000;padding-right:19px}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{background-color:initial;border-left:2px solid #000;color:#000;font-weight:700;padding-left:18px}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{border-left:none;border-right:2px solid #000;padding-right:18px}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:30px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:40px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{font-weight:500;padding-left:28px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{font-weight:500;padding-left:38px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{max-height:70vh;max-width:15vw;overflow:auto;position:fixed;top:0}.back-to-top,.expand-toggle,.go-to-bottom{color:#999;display:block;font-size:12px;font-weight:500;margin-left:10px;margin-top:10px;padding:4px 10px}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{background-position:50%;background-repeat:no-repeat;background-size:cover;border-radius:50%;display:block;height:20px;margin-bottom:2px;margin-right:5px;margin-top:2px;width:20px}.ui-user-icon.small{display:inline-block;height:18px;margin:0 0 .2em;vertical-align:middle;width:18px}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;padding-left:22px;text-decoration:none}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}.inline-spoiler-section{cursor:pointer}.inline-spoiler-section .spoiler-text{background-color:#333;border-radius:2px}.inline-spoiler-section .spoiler-text>*{opacity:0}.inline-spoiler-section .spoiler-img{filter:blur(10px)}.inline-spoiler-section.raw{background-color:#333;border-radius:2px}.inline-spoiler-section.raw>*{opacity:0}.inline-spoiler-section.unveil{cursor:auto}.inline-spoiler-section.unveil .spoiler-text{background-color:#3333331a}.inline-spoiler-section.unveil .spoiler-text>*{opacity:1}.inline-spoiler-section.unveil .spoiler-img{filter:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{color:#222;position:relative;z-index:1}.markdown-body.slides:before{background-color:currentColor;bottom:0;box-shadow:0 0 0 50vw;content:"";display:block;left:0;position:absolute;right:0;top:0;z-index:-1}.markdown-body.slides section[data-markdown]{background-color:#fff;margin-bottom:1.5em;position:relative;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{left:1em;max-height:100%;overflow:hidden;position:absolute;right:1em;top:50%;transform:translateY(-50%)}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{border:3px solid #777;content:"";height:1.5em;position:absolute;right:1em;top:-1.5em}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}svg{text-shadow:none}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-inner comment-enabled" data-hard-breaks="true"><h1 id="Python-期末论文" data-id="Python-期末论文"><a class="anchor hidden-xs" href="#Python-期末论文" title="Python-期末论文"><span class="octicon octicon-link"></span></a><span>Python 期末论文</span></h1><h2 id="一、项目简介" data-id="一、项目简介"><a class="anchor hidden-xs" href="#一、项目简介" title="一、项目简介"><span class="octicon octicon-link"></span></a><span>一、项目简介</span></h2><p><span>本报告全面介绍了一项基于 Python 编程语言和 Pygame 库开发的 2D 游戏项目。该项目旨在模拟一个在线多人射击游戏环境，涵盖了玩家移动、武器切换、射击动作以及网络多人交互等核心功能。报告深入探讨了项目的起源、设计理念、技术挑战以及具体的实现细节，为读者提供了一个关于如何从概念到实现的完整视角。</span></p><h3 id="11-项目背景" data-id="11-项目背景"><a class="anchor hidden-xs" href="#11-项目背景" title="11-项目背景"><span class="octicon octicon-link"></span></a><span>1.1 项目背景</span></h3><p><span>本项目的构想源自于对多人在线游戏互动和竞技体验的深刻洞察。游戏开发的初衷是创造一个能够让玩家在虚拟世界中实时交流和竞技的平台。然而，在项目实施过程中，我遭遇了一系列挑战，尤其是在时间管理和资源分配方面。面对这学期繁重的项目量，我们不得不在 GitHub 上夜以继日地工作，确保项目的每个里程碑都能按时完成。在这一过程中，不得不对原始的宏大构想进行精简，删减部分功能和需求，集中精力在最后的关键阶段完成了项目的核心功能，将其精炼为一个 2D 枪战游戏框架 Demo。</span></p><h3 id="12-项目目标" data-id="12-项目目标"><a class="anchor hidden-xs" href="#12-项目目标" title="12-项目目标"><span class="octicon octicon-link"></span></a><span>1.2 项目目标</span></h3><p><span>尽管面临诸多挑战，依然确立了以下项目目标，以确保最终交付的产品能够体现我们最初的愿景：</span></p><ul>
+<li><span>2D游戏界面实现：开发一个直观的 2D 游戏界面，不仅支持玩家的自由移动，还允许玩家根据游戏内情况调整视角进行旋转。</span></li>
+<li><span>多样化武器系统：集成多种武器，模拟真实的射击和装填机制，为玩家提供丰富的战斗体验。</span></li>
+<li><span>网络多人交互框架：构建一个基础的网络框架，使得多个玩家能够在同一个游戏实例中进行实时的交互和竞技。</span></li>
+</ul><p><span>通过这些目标的实现，期望为玩家提供一个既简单又充满挑战的在线多人射击游戏体验，同时为游戏开发爱好者提供一个可扩展的游戏框架，以便于他们在此基础上进行更深层次的探索和创新。</span></p><h2 id="二、详细设计和关键技术" data-id="二、详细设计和关键技术"><a class="anchor hidden-xs" href="#二、详细设计和关键技术" title="二、详细设计和关键技术"><span class="octicon octicon-link"></span></a><span>二、详细设计和关键技术</span></h2><h3 id="21-项目开发与维护工具" data-id="21-项目开发与维护工具"><a class="anchor hidden-xs" href="#21-项目开发与维护工具" title="21-项目开发与维护工具"><span class="octicon octicon-link"></span></a><span>2.1 项目开发与维护工具</span></h3><p><strong><span>Poetry 虚拟环境管理</span></strong><br>
+<span>Poetry 是一个用于 Python 项目的依赖管理和打包工具。我们使用 Poetry 来管理项目依赖，确保所有开发人员和生产环境使用一致的库版本，避免常见的依赖冲突问题。</span></p><p><strong><span>isort 导入格式化</span></strong><br>
+<span>为了保持代码的整洁和一致性，采用了 isort 工具来自动格式化 Python 文件中的导入语句。这有助于保持统一的代码风格，并且使得新贡献者能够更容易地理解和遵循项目编码标准。</span></p><p><strong><span>Pylint 代码质量检查</span></strong><br>
+<span>Pylint 是一个 Python 代码静态分析工具，用于检查代码是否符合 PEP8 编码标准。通过集成 Pylint，能够在开发过程中即时发现潜在的代码问题，从而提高代码质量和可维护性。</span></p><p><strong><span>Pytest 单元测试</span></strong><br>
+<span>为了确保代码的可靠性和稳定性，使用 Pytest 框架来编写和执行单元测试。这不仅帮助验证功能的正确性，还允许我们在代码修改后快速定位问题，确保新代码不会破坏现有功能。</span></p><p><strong><span>Mkdocs 项目文档构建</span></strong><br>
+<span>文档是项目的重要组成部分。使用 Mkdocs 来构建项目文档，它支持 Markdown 格式，可以轻松地生成美观、易读的文档网站，为项目用户提供详尽的指导和参考。</span></p><p><strong><span>Tox 自动化任务流程</span></strong><br>
+<span>Tox 是一个 Python 自动化测试工具，允许我们针对不同的环境配置来运行测试。通过使用 Tox，可以确保代码在多种配置下都能正常工作，从而提高项目的兼容性和稳健性。</span></p><p><strong><span>GitHub Actions 持续集成</span></strong><br>
+<span>GitHub Actions 能够自动化代码检查和测试流程。每当代码更新时，GitHub Actions 会自动运行定义好的工作流程，包括代码格式化检查、风格检查和测试，确保代码提交符合项目标准。</span></p><p><strong><span>GitHub Dependabot 依赖更新</span></strong><br>
+<span>为了保持项目依赖的安全性和最新性，使用 GitHub Dependabot 来自动监控依赖库的更新。当有新版本的依赖发布时，Dependabot 会创建拉取请求，帮助我们及时地集成安全修复和性能改进。</span></p><h3 id="22-项目结构设计" data-id="22-项目结构设计"><a class="anchor hidden-xs" href="#22-项目结构设计" title="22-项目结构设计"><span class="octicon octicon-link"></span></a><span>2.2 项目结构设计</span></h3><p><span>项目的目录结构是模块化和组织化开发的关键。在的项目中，</span><code>src</code><span> 文件夹作为源代码的根目录，它被划分为两个主要部分：</span><code>assets</code><span> 和 </span><code>gungaleonline</code><span>，以确保资源和代码的有效分离和管理。</span></p><h4 id="Assets-资源文件夹" data-id="Assets-资源文件夹"><a class="anchor hidden-xs" href="#Assets-资源文件夹" title="Assets-资源文件夹"><span class="octicon octicon-link"></span></a><span>Assets 资源文件夹</span></h4><p><code>assets</code><span> 文件夹是所有静态资源的存储地，它进一步组织为多个子文件夹，以便于管理和访问。这些资源包括：</span></p><ul>
+<li><span>字体：游戏界面所需的定制字体，为玩家提供一致的视觉体验。</span></li>
+<li><span>游戏地图：地图文件，采用</span><code>.tmx</code><span>格式，由Tiled地图编辑器设计，用于游戏中的环境布局。</span></li>
+<li><span>游戏日志：记录游戏运行时的日志文件，用于调试和追踪游戏状态。</span></li>
+<li><span>图片素材：游戏中使用的所有图像资源，包括角色、道具、界面元素等，这些素材经过精心设计，以符合游戏的美术风格。</span></li>
+</ul><h4 id="GunGaleOnline-代码文件夹" data-id="GunGaleOnline-代码文件夹"><a class="anchor hidden-xs" href="#GunGaleOnline-代码文件夹" title="GunGaleOnline-代码文件夹"><span class="octicon octicon-link"></span></a><span>GunGaleOnline 代码文件夹</span></h4><p><code>gungaleonline</code><span> 文件夹则是项目的核心，存放所有的 Python 脚本代码。这个文件夹按照功能和模块进一步细分，以提高代码的可读性和可维护性：</span></p><ul>
+<li><span>游戏逻辑：包括游戏循环、玩家控制、敌人AI等。</span></li>
+<li><span>网络通信：处理玩家之间的数据同步和通信。</span></li>
+<li><span>用户界面：管理游戏内的HUD、菜单和控制元素。</span></li>
+<li><span>资源管理：加载和卸载游戏资源，确保性能最优化。</span></li>
+</ul><h3 id="23-素材制作与设计" data-id="23-素材制作与设计"><a class="anchor hidden-xs" href="#23-素材制作与设计" title="23-素材制作与设计"><span class="octicon octicon-link"></span></a><span>2.3 素材制作与设计</span></h3><p><strong><span>素材灵感</span></strong><br>
+<span>在游戏开发过程中，灵感的捕捉至关重要。在素材的选择上，我被 KENNEY 网站上的一份素材所吸引，它以其独特的风格和高质量的设计给我们留下了深刻的印象。这份素材不仅满足了我对游戏视觉效果的初步设想，也激发了我对游戏世界构建的无限想象。</span></p><p><strong><span>素材制作</span></strong><br>
+<span>受到 KENNEY 素材的启发，我决定基于这些原型进行再创作，以确保素材与我们的游戏风格和主题完美融合。对原始素材进行了重新设计和绘制，精心调整了色彩、形状和纹理，以符合游戏的整体美学和设计语言。</span></p><p><strong><span>地图设计</span></strong><br>
+<span>对于游戏地图的构建，采用了 Tiled 地图编辑器，这是一个功能强大的工具，允许通过拖放的方式快速构建复杂的游戏环境。将每个 tile 的图片导入Tiled，然后细致地排列组合，创造出丰富的地形和结构。完成设计后，将其导出为</span><code>.tmx</code><span>文件格式，这一格式被广泛用于游戏开发，因其能够高效地与游戏引擎如 Pygame 集成。</span></p><p><span>通过这种方式，提高了地图制作的效率，还确保了地图设计的灵活性和可扩展性。在 Pygame 中引入</span><code>.tmx</code><span>文件后，可以轻松地实现地图的渲染和交互，为玩家带来沉浸式的游戏体验。</span></p><h3 id="24-类结构设计" data-id="24-类结构设计"><a class="anchor hidden-xs" href="#24-类结构设计" title="24-类结构设计"><span class="octicon octicon-link"></span></a><span>2.4 类结构设计</span></h3><p><span>在本项目中，采用了面向对象的编程范式来构建游戏的各个组成部分。以下是对各个核心类的设计说明以及它们在代码中的实现示例。</span></p><h4 id="Game（主游戏类）" data-id="Game（主游戏类）"><a class="anchor hidden-xs" href="#Game（主游戏类）" title="Game（主游戏类）"><span class="octicon octicon-link"></span></a><span>Game（主游戏类）</span></h4><p><span>Game 类是整个游戏的入口点和控制中心，负责初始化游戏环境、管理游戏循环以及处理游戏状态的转换。</span></p><p><strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Game</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 初始化pygame模块，准备游戏环境</span>
+        pygame.init()
+        <span class="hljs-comment"># 创建一个时钟对象，用于控制游戏循环的帧率</span>
+        self.clock = pygame.time.Clock()
+        <span class="hljs-comment"># 加载字体文件，并指定字号大小</span>
+        self.font = pygame.font.Font(FONT_PATH, FONT_SIZE_SM)
+        <span class="hljs-comment"># 设置游戏窗口的显示模式和尺寸</span>
+        self.screen = pygame.display.set_mode(WINDOW_DIMENSIONS)
+        <span class="hljs-comment"># 创建一个用于渲染游戏元素的表面对象，与屏幕尺寸相同</span>
+        self.render_surface = pygame.Surface(WINDOW_DIMENSIONS)
+        <span class="hljs-comment"># ...</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 游戏运行的主循环</span>
+        <span class="hljs-keyword">while</span> self.running:
+            <span class="hljs-comment"># 限制游戏循环的帧率，防止运行过快</span>
+            self.clock.tick(FPS)
+            <span class="hljs-comment"># 处理玩家的输入，如键盘和鼠标事件</span>
+            self.handle_input()
+            <span class="hljs-comment"># 更新当前场景的状态，包括玩家移动、游戏逻辑等</span>
+            self.update_scene()
+            <span class="hljs-comment"># 渲染当前场景到渲染表面</span>
+            self.render_scene()
+            <span class="hljs-comment"># 更新屏幕显示，将渲染表面的内容绘制到屏幕上</span>
+            self.update_screen()
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_input</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 从pygame.event.get()获取事件列表，然后根据事件类型进行处理</span>
+        <span class="hljs-comment"># 例如，检测玩家是否按下退出游戏的快捷键</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_scene</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 调用所有游戏对象的更新方法，如Player的move方法</span>
+        <span class="hljs-comment"># 也包括游戏状态的转换逻辑，比如从菜单状态转到游戏状态</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render_scene</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 在渲染包括背景、玩家、敌人、子弹、UI等</span>
+        <span class="hljs-comment"># 调用渲染方法时，应该考虑元素的绘制顺序，以保证正确的覆盖关系</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_screen</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 将渲染表面涉及到清空屏幕、绘制渲染表面，然后更新显示</span>
+        <span class="hljs-keyword">pass</span>
+</code></pre><h4 id="Hud（用户界面显示类）" data-id="Hud（用户界面显示类）"><a class="anchor hidden-xs" href="#Hud（用户界面显示类）" title="Hud（用户界面显示类）"><span class="octicon octicon-link"></span></a><span>Hud（用户界面显示类）</span></h4><p><span>Hud 类负责渲染用户界面，包括生命值、弹药计数和其他重要信息的展示。</span></p><p><strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Hud</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, p: Player</span>):
+        <span class="hljs-comment"># 初始化HUD对象，绑定玩家对象，用于获取玩家状态进行界面显示</span>
+        self.player = p
+        <span class="hljs-comment"># 记录上次的武器状态，用于检测武器切换并更新显示</span>
+        self.last_weapon = self.player.active_weapon
+        <span class="hljs-comment"># 记录上次的弹药状态，用于检测弹药变化并更新显示</span>
+        self.last_ammo = self.player.ammo.copy()
+        <span class="hljs-comment"># 记录上次的生命值状态，用于检测生命值变化并更新显示</span>
+        self.last_hearts = self.player.hearts
+        <span class="hljs-comment"># 记录上次的装填进度，用于更新装填动画</span>
+        self.last_reload = <span class="hljs-number">0</span>
+        <span class="hljs-comment"># 设置完整的装填动作持续时间</span>
+        self.full_reload_duration = <span class="hljs-number">60</span>
+        <span class="hljs-comment"># 记录当前装填动作的持续计数，用于装填动画的进度控制</span>
+        self.full_reload_count = <span class="hljs-number">0</span>
+        <span class="hljs-comment"># 记录上次更新时刻的时间戳，用于计算时间差</span>
+        self.last_time = time.time()
+        <span class="hljs-comment"># 记录上一帧到当前帧的时间差，用于动画和更新的平滑处理</span>
+        self.dt = <span class="hljs-number">1</span>
+        <span class="hljs-comment"># 加载HUD所需的资源，如图像和字体</span>
+        self._load_resources()
+        <span class="hljs-comment"># 准备渲染表面，用于绘制HUD元素</span>
+        self._render_surfaces()
+        <span class="hljs-comment"># 根据玩家状态渲染初始的生命值、弹药和武器图标</span>
+        self.render_hearts()
+        self.render_bullets()
+        self.render_weapons()
+        self.render_reload(self.last_reload)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_load_resources</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 私有方法，用于加载HUD所需的资源，如图标和背景图像</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_load_images</span>(<span class="hljs-params">self, image_keys</span>):
+        <span class="hljs-comment"># 私有方法，根据提供的键值列表加载图像资源</span>
+        <span class="hljs-comment"># 可以由_load_resources调用，以加载所需的所有图像</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_render_surfaces</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 私有方法，用于创建或更新HUD的渲染表面</span>
+        <span class="hljs-comment"># 这可能包括生命值条、弹药计数器、武器图标等</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 更新HUD的显示，根据玩家状态的变化重新渲染必要的元素</span>
+        <span class="hljs-comment"># 这个方法在游戏循环中被调用，以确保HUD反映最新的游戏状态</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface: pygame.Surface</span>):
+        <span class="hljs-comment"># 将HUD渲染到提供的surface上</span>
+        <span class="hljs-comment"># 这通常在Game类的render_scene方法中调用，将HUD绘制到屏幕上</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render_hearts</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据玩家的生命值状态更新生命值条的显示</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render_bullets</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据玩家的弹药状态更新弹药计数器的显示</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render_weapons</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据玩家的当前武器更新武器图标的显示</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render_reload</span>(<span class="hljs-params">self, progress</span>):
+        <span class="hljs-comment"># progress参数指示装填动作的当前完成度</span>
+        <span class="hljs-keyword">pass</span>
+</code></pre><h4 id="Bullet（子弹类）" data-id="Bullet（子弹类）"><a class="anchor hidden-xs" href="#Bullet（子弹类）" title="Bullet（子弹类）"><span class="octicon octicon-link"></span></a><span>Bullet（子弹类）</span></h4><p><span>Bullet 类表示游戏中的子弹，处理子弹的发射、移动和碰撞检测。</span></p><p><strong><span>代码示例：</span></strong><br>
+<span>class Bullet:</span><br>
+<span># 子弹类的构造函数，初始化子弹的属性</span><br>
+<span>def </span><strong><span>init</span></strong><span>(self, direction, center, speed, damage, map):</span><br>
+<span># 根据传入的参数初始化子弹的各个属性</span><br>
+<span># 并调用内部方法_init_attributes来完成设置</span><br>
+<span>self._init_attributes(direction, center, speed, damage, map)</span></p><pre><code class="python hljs"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Bullet</span>:
+    <span class="hljs-comment"># 子弹类的构造函数，初始化子弹的属性</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, direction, center, speed, damage, <span class="hljs-built_in">map</span></span>):
+        <span class="hljs-comment"># 根据传入的参数初始化子弹的各个属性</span>
+        <span class="hljs-comment"># 并调用内部方法_init_attributes来完成设置</span>
+        self._init_attributes(direction, center, speed, damage, <span class="hljs-built_in">map</span>)
+
+    <span class="hljs-comment"># 初始化子弹属性的内部方法</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_init_attributes</span>(<span class="hljs-params">self, direction, center, speed, damage, <span class="hljs-built_in">map</span></span>):
+        <span class="hljs-comment"># 设置子弹的单方向属性、移动方向、中心点坐标、速度、伤害和地图</span>
+        self.one_direction = direction
+        self.direction = (direction[<span class="hljs-number">0</span>] * speed, direction[<span class="hljs-number">1</span>] * speed)
+        self.center = center
+        self.speed = speed
+        self.damage = damage
+        self.<span class="hljs-built_in">map</span> = <span class="hljs-built_in">map</span>
+        <span class="hljs-comment"># 标记子弹的初始状态</span>
+        self.dead = <span class="hljs-literal">False</span>
+        self.collided = <span class="hljs-literal">False</span>
+        <span class="hljs-comment"># 记录上一次更新的时间戳和时间差</span>
+        self.last_time = time.time()
+        self.dt = <span class="hljs-number">1</span>
+        <span class="hljs-comment"># 加载子弹的动画帧</span>
+        self._load_frames()
+        <span class="hljs-comment"># 初始化子弹的当前帧、动画计数器和图像</span>
+        self.frame = <span class="hljs-number">0</span>
+        self.animation_change = <span class="hljs-number">10</span>
+        self.animation_count = <span class="hljs-number">0</span>
+        self.image = self.frames[self.frame]
+        self.rect = self.image.get_rect(center=self.center)
+        self.mask = pygame.mask.from_surface(self.image)
+        <span class="hljs-comment"># 更新子弹的动画帧</span>
+        self._update_frame()
+
+    <span class="hljs-comment"># 加载子弹动画帧的内部方法</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_load_frames</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据子弹的类型，从animations字典加载或初始化动画帧列表</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-comment"># 更新子弹动画帧的内部方法</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_update_frame</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据动画计数器和变化速率更新子弹的当前动画帧</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-comment"># 更新子弹状态的公共方法</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 在每一帧更新子弹的位置和动画</span>
+        <span class="hljs-comment"># 检查是否需要移动子弹或检测碰撞</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-comment"># 移动子弹的内部方法</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_move_bullet</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据子弹的速度和时间差更新子弹的中心位置</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-comment"># 检查子弹碰撞的内部方法</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_check_collision</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 检查子弹是否与游戏地图中的墙壁或其他对象发生碰撞</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-comment"># 渲染子弹的公共方法</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface: pygame.Surface</span>):
+        <span class="hljs-comment"># 将当前子弹图像渲染到提供的surface上</span>
+        <span class="hljs-keyword">pass</span>
+</code></pre><h4 id="Map（地图类）" data-id="Map（地图类）"><a class="anchor hidden-xs" href="#Map（地图类）" title="Map（地图类）"><span class="octicon octicon-link"></span></a><span>Map（地图类）</span></h4><p><span>Map 类用于加载和渲染游戏地图，处理地图上的各种元素和障碍物。</span><br>
+<strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Tile</span>:
+    <span class="hljs-comment"># Tile 类代表地图上的单个瓦片，可以是障碍物、地面或其他静态元素</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, image, rect</span>):
+        <span class="hljs-comment"># 初始化Tile对象，接收一个图像和矩形区域作为参数</span>
+        self.image = image  <span class="hljs-comment"># 瓦片的图像</span>
+        self.rect = rect  <span class="hljs-comment"># 瓦片在地图上的位置，pygame.Rect对象</span>
+        self.mask = pygame.mask.from_surface(self.image)  <span class="hljs-comment"># 从瓦片图像创建掩码</span>
+        <span class="hljs-comment"># 瓦片四个角的坐标</span>
+        self.corners = [
+            self.rect.topleft,
+            self.rect.topright,
+            self.rect.bottomright,
+            self.rect.bottomleft,
+        ]
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Wall</span>:
+    <span class="hljs-comment"># Wall 类代表由多个Tile组成的墙壁或障碍物</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, tiles, vertical=<span class="hljs-literal">False</span></span>):
+        self.tiles = tiles  <span class="hljs-comment"># 构成墙壁的瓦片列表</span>
+        self.vertical = vertical  <span class="hljs-comment"># 标志墙壁是否为垂直方向</span>
+        <span class="hljs-comment"># 计算墙壁的矩形区域</span>
+        x = self.tiles[<span class="hljs-number">0</span>].rect.x
+        y = self.tiles[<span class="hljs-number">0</span>].rect.y
+        <span class="hljs-keyword">if</span> self.vertical:
+            width = TILE_SIZE
+            height = TILE_SIZE * <span class="hljs-built_in">len</span>(self.tiles)
+        <span class="hljs-keyword">else</span>:
+            width = TILE_SIZE * <span class="hljs-built_in">len</span>(self.tiles)
+            height = TILE_SIZE
+        self.distance = <span class="hljs-number">0</span>  <span class="hljs-comment"># 用于计算与玩家的距离</span>
+        self.rect = pygame.Rect(x, y, width, height)  <span class="hljs-comment"># 墙壁的pygame.Rect对象</span>
+        <span class="hljs-comment"># 墙壁四个角的坐标</span>
+        self.corners = [
+            self.rect.topleft,
+            self.rect.topright,
+            self.rect.bottomright,
+            self.rect.bottomleft,
+        ]
+        <span class="hljs-comment"># 使用shapely库创建墙壁的多边形形状</span>
+        self.shapely = geometry.Polygon(self.corners)
+        <span class="hljs-comment"># 创建一个Surface对象来存储墙壁的图像</span>
+        self.image = pygame.Surface((width, height))
+        <span class="hljs-keyword">for</span> i, tile <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(self.tiles):
+            <span class="hljs-keyword">if</span> self.vertical:
+                self.image.blit(tile.image, (<span class="hljs-number">0</span>, i * TILE_SIZE))  <span class="hljs-comment"># 垂直墙壁的图像拼接</span>
+            <span class="hljs-keyword">else</span>:
+                self.image.blit(tile.image, (i * TILE_SIZE, <span class="hljs-number">0</span>))  <span class="hljs-comment"># 水平墙壁的图像拼接</span>
+        self.mask = pygame.mask.from_surface(self.image)  <span class="hljs-comment"># 从墙壁图像创建掩码</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Map</span>:
+    <span class="hljs-comment"># Map 类代表游戏的地图，由多个Tile和Wall组成</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, path</span>):
+        <span class="hljs-comment"># 从指定的CSV文件路径加载地图数据</span>
+        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(path) <span class="hljs-keyword">as</span> file:
+            csv_content = csv.reader(file, delimiter=<span class="hljs-string">","</span>)
+            self.<span class="hljs-built_in">map</span> = [line <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> csv_content]
+        self.image = <span class="hljs-literal">None</span>  <span class="hljs-comment"># 存储整个地图的图像</span>
+        self.tiles = []  <span class="hljs-comment"># 存储地图上的瓦片</span>
+        self.walls = []  <span class="hljs-comment"># 存储地图上的墙壁</span>
+        self.inside_walls = []  <span class="hljs-comment"># 存储地图内部的墙壁</span>
+        self.render_map()  <span class="hljs-comment"># 调用方法来渲染地图</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">draw</span>(<span class="hljs-params">self, surface</span>):
+        <span class="hljs-comment"># 将地图渲染到提供的surface上</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render_map</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据CSV数据或预先定义的布局创建地图上的瓦片和墙壁</span>
+        <span class="hljs-comment"># 这个方法会被调用来初始化地图，并且可以在需要时重新渲染地图</span>
+        <span class="hljs-keyword">pass</span>
+Player（玩家类）
+Player 类代表游戏中的玩家，管理玩家的状态、行为和输入响应。
+代码示例：
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">RemotePlayer</span>:
+    <span class="hljs-comment"># RemotePlayer 类代表游戏中的远程玩家（其他玩家）</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, <span class="hljs-built_in">map</span>, team</span>):
+        <span class="hljs-comment"># 初始化远程玩家的属性，包括地图、队伍、位置、旋转角度、激活武器和生命值</span>
+        self.<span class="hljs-built_in">map</span> = <span class="hljs-built_in">map</span>
+        self.team = team
+        self.center = (<span class="hljs-number">4</span> * TILE_SIZE, <span class="hljs-number">3</span> * TILE_SIZE)  <span class="hljs-comment"># 初始位置</span>
+        self.rotation = <span class="hljs-number">0</span>  <span class="hljs-comment"># 旋转角度</span>
+        self.active_weapon = <span class="hljs-string">"pistol"</span>  <span class="hljs-comment"># 默认激活的武器</span>
+        self.hearts = <span class="hljs-number">3</span>  <span class="hljs-comment"># 生命值</span>
+        <span class="hljs-comment"># 加载不同武器的动画帧</span>
+        self.knife_frames = load_animation(ANIMATIONS_PATH + <span class="hljs-string">"knife_"</span>, <span class="hljs-number">2</span>)
+        self.pistol_frames = load_animation(ANIMATIONS_PATH + <span class="hljs-string">"pistol_"</span>, <span class="hljs-number">2</span>)
+        self.rifle_frames = load_animation(ANIMATIONS_PATH + <span class="hljs-string">"rifle_"</span>, <span class="hljs-number">2</span>)
+        <span class="hljs-comment"># 初始化图像和掩码</span>
+        self.image = self.pistol_frames[<span class="hljs-number">0</span>]
+        self.rect = self.image.get_rect(center=self.center)
+        self.rotated_image = self.image
+        self.mask = pygame.mask.from_surface(self.image)
+        self.frame = <span class="hljs-number">0</span>  <span class="hljs-comment"># 当前动画帧</span>
+        <span class="hljs-comment"># 子弹列表和新生成的子弹列表</span>
+        self.bullets = []
+        self.new_bullets = []
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 更新远程玩家的状态，如位置、旋转和动画</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface: pygame.Surface</span>):
+        <span class="hljs-comment"># 将远程玩家渲染到指定的Surface上</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">set_rotation</span>(<span class="hljs-params">self, angle</span>):
+        <span class="hljs-comment"># 设置远程玩家的旋转角度</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">set_center</span>(<span class="hljs-params">self, center</span>):
+        <span class="hljs-comment"># 设置远程玩家的位置</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">set_image</span>(<span class="hljs-params">self, weapon=<span class="hljs-literal">None</span>, frame=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 根据武器类型和动画帧更新远程玩家的图像</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_bullets</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 更新远程玩家的子弹状态</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_bullet</span>(<span class="hljs-params">self, direction, center, speed, damage, new=<span class="hljs-literal">False</span></span>):
+        <span class="hljs-comment"># 向远程玩家的子弹列表中添加新子弹</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_new_bullets</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 获取远程玩家新生成的子弹列表</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Player</span>:
+    <span class="hljs-comment"># Player 类代表本地玩家</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, center, <span class="hljs-built_in">map</span>, team</span>):
+        <span class="hljs-comment"># 初始化本地玩家的属性，包括位置、地图、队伍、出生点、速度、移动方向等</span>
+        self.center = center
+        self.<span class="hljs-built_in">map</span> = <span class="hljs-built_in">map</span>
+        self.team = team
+        self.spawn = center
+        <span class="hljs-comment"># 游戏循环相关的时间属性</span>
+        self.last_time = time.time()
+        self.dt = <span class="hljs-number">1</span>
+        <span class="hljs-comment"># 移动和攻击相关属性</span>
+        self.speed = <span class="hljs-number">1</span>
+        self.dx = <span class="hljs-number">0</span>
+        self.dy = <span class="hljs-number">0</span>
+        <span class="hljs-comment"># 加载不同武器的动画帧</span>
+        self.knife_frames = load_animation(ANIMATIONS_PATH + <span class="hljs-string">"knife_"</span>, <span class="hljs-number">2</span>)
+        self.pistol_frames = load_animation(ANIMATIONS_PATH + <span class="hljs-string">"pistol_"</span>, <span class="hljs-number">2</span>)
+        self.rifle_frames = load_animation(ANIMATIONS_PATH + <span class="hljs-string">"rifle_"</span>, <span class="hljs-number">2</span>)
+        <span class="hljs-comment"># 初始化图像、掩码和旋转图像</span>
+        self.frame = <span class="hljs-number">0</span>
+        self.image = self.pistol_frames[self.frame]
+        self.rect = self.image.get_rect(center=self.center)
+        self.mask = pygame.mask.from_surface(self.image)
+        self.rotation = <span class="hljs-number">0</span>
+        self.rotated_image = self.image
+        <span class="hljs-comment"># 子弹相关属性</span>
+        self.bullets = []
+        self.new_bullets = []
+        self.bullets_speed = <span class="hljs-number">30</span>
+        <span class="hljs-comment"># 武器和弹药相关属性</span>
+        self.active_weapon = <span class="hljs-string">"pistol"</span>
+        self.ammo = self.pistol_ammo  <span class="hljs-comment"># 当前激活武器的弹药</span>
+        <span class="hljs-comment"># 每种武器的攻击和装填参数</span>
+        self.knife_delay = <span class="hljs-number">30</span>
+        self.knife_attack_duration = <span class="hljs-number">10</span>
+        self.knife_max_ammo = <span class="hljs-number">0</span>
+        self.knife_ammo = [self.knife_max_ammo, self.knife_max_ammo]
+        self.knife_damage = <span class="hljs-number">3</span>
+        self.pistol_delay = <span class="hljs-number">10</span>
+        self.pistol_attack_duration = <span class="hljs-number">5</span>
+        self.pistol_recoil = <span class="hljs-number">0.5</span>
+        self.pistol_max_ammo = <span class="hljs-number">10</span>
+        self.pistol_ammo = [self.pistol_max_ammo, self.pistol_max_ammo]
+        self.pistol_damage = <span class="hljs-number">1</span>
+        self.rifle_delay = <span class="hljs-number">20</span>
+        self.rifle_attack_duration = <span class="hljs-number">5</span>
+        self.rifle_recoil = <span class="hljs-number">1</span>
+        self.rifle_max_ammo = <span class="hljs-number">30</span>
+        self.rifle_ammo = [self.rifle_max_ammo, self.rifle_max_ammo]
+        self.rifle_damage = <span class="hljs-number">0.5</span>
+        <span class="hljs-comment"># 攻击和装填状态</span>
+        self.delay_count = <span class="hljs-number">0</span>
+        self.attack_count = <span class="hljs-number">0</span>
+        self.can_attack = <span class="hljs-literal">True</span>
+        self.reloading = <span class="hljs-literal">False</span>
+        self.reloading_duration = <span class="hljs-number">100</span>
+        self.reloading_counter = <span class="hljs-number">0</span>
+        <span class="hljs-comment"># 生命值</span>
+        self.max_hearts = <span class="hljs-number">3</span>
+        self.hearts = self.max_hearts
+        <span class="hljs-comment"># 记录受到的伤害</span>
+        self.damage_taken = []
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, enemies=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 更新玩家状态，包括移动、攻击、装填和生命值等</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface: pygame.Surface</span>):
+        <span class="hljs-comment"># 将玩家渲染到指定的Surface上</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">check_enemy_bullets</span>(<span class="hljs-params">self, enemies</span>):
+        <span class="hljs-comment"># 检查并处理与敌方子弹的碰撞</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">attack</span>(<span class="hljs-params">self, clicked=<span class="hljs-literal">False</span></span>):
+        <span class="hljs-comment"># 执行玩家的攻击动作</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_new_bullets</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 获取玩家新生成的子弹列表</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">reload</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 执行装填弹药的动作</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_bullets</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 更新玩家的子弹状态</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">switch_weapon</span>(<span class="hljs-params">self, ind: <span class="hljs-built_in">int</span></span>):
+        <span class="hljs-comment"># 切换到指定的武器</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_image</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 更新玩家的当前图像，根据武器类型和动画帧</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">rotate</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据鼠标位置旋转玩家的朝向</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">check_collision_x</span>(<span class="hljs-params">self, center, rect</span>):
+        <span class="hljs-comment"># 检查并处理玩家在x轴上的碰撞</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">check_collision_y</span>(<span class="hljs-params">self, center, rect</span>):
+        <span class="hljs-comment"># 检查并处理玩家在y轴上的碰撞</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_damage_taken</span>(<span class="hljs-params">self, index: <span class="hljs-built_in">int</span></span>):
+        <span class="hljs-comment"># 获取玩家受到的伤害列表</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-comment"># 移动方法，控制玩家在地图上的移动</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">go_up</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">go_down</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">go_left</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">go_right</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-comment"># 停止移动的方法</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">stop_x</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">stop_y</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">pass</span>
+</code></pre><h4 id="ShadowCaster（阴影投射类）" data-id="ShadowCaster（阴影投射类）"><a class="anchor hidden-xs" href="#ShadowCaster（阴影投射类）" title="ShadowCaster（阴影投射类）"><span class="octicon octicon-link"></span></a><span>ShadowCaster（阴影投射类）</span></h4><p><span>ShadowCaster 类处理游戏中的阴影效果，增加视觉真实感。</span><br>
+<strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Shadow</span>:
+    <span class="hljs-comment"># Shadow 类表示一个阴影，用于在游戏世界中投射玩家或其他对象的阴影</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, rect, polygon</span>):
+        <span class="hljs-comment"># 初始化Shadow对象，接收一个pygame.Rect对象和表示阴影多边形的点列表</span>
+        self.rect = rect  <span class="hljs-comment"># 阴影的矩形区域，用于碰撞检测等</span>
+        self.polygon = polygon  <span class="hljs-comment"># 阴影多边形的顶点列表</span>
+        <span class="hljs-comment"># 使用shapely库创建阴影的多边形形状，便于后续的几何计算</span>
+        self.shapely = geometry.Polygon(self.polygon)
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ShadowCaster</span>:
+    <span class="hljs-comment"># ShadowCaster 类负责处理游戏中的阴影投射逻辑</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, player, <span class="hljs-built_in">map</span></span>):
+        <span class="hljs-comment"># 初始化ShadowCaster对象，需要玩家对象和地图对象作为参数</span>
+        self.player = player  <span class="hljs-comment"># 游戏中的玩家对象</span>
+        self.<span class="hljs-built_in">map</span> = <span class="hljs-built_in">map</span>  <span class="hljs-comment"># 游戏的地图对象</span>
+        <span class="hljs-comment"># 渲染表面的大小，与游戏窗口的大小一致</span>
+        self.render_width = WINDOW_WIDTH
+        self.render_height = WINDOW_HEIGHT
+        <span class="hljs-comment"># 创建一个Surface对象用于渲染阴影</span>
+        self.render_surface = pygame.Surface((self.render_width, self.render_height))
+        <span class="hljs-comment"># 设置渲染表面的透明色键</span>
+        self.render_surface.set_colorkey(COLOR[<span class="hljs-string">"black"</span>])
+        <span class="hljs-comment"># 记录上次玩家中心点的位置，用于检测玩家位置的变化</span>
+        self.last_player_center = (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, debug=<span class="hljs-literal">False</span></span>):
+        <span class="hljs-comment"># 更新阴影投射器的状态，包括重新计算阴影形状和位置</span>
+        <span class="hljs-comment"># 如果debug为True，则在渲染过程中绘制调试信息</span>
+        <span class="hljs-comment"># 在游戏循环中被调用，以确保阴影与玩家同步</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface</span>):
+        <span class="hljs-comment"># 将渲染好的阴影绘制到提供的surface上</span>
+        <span class="hljs-comment"># 在Game类的render_scene方法中调用，将阴影渲染到屏幕上</span>
+        <span class="hljs-keyword">pass</span>
+Menu（菜单类）
+Menu 类负责游戏菜单的逻辑和显示，包括开始游戏、设置和退出等选项。
+代码示例：
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Button</span>:
+    <span class="hljs-comment"># Button 类表示一个可交互的按钮，用于游戏菜单和界面</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, title, rect: pygame.Rect, image=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 初始化按钮的属性，包括标题、矩形区域和可选的图像</span>
+        self.title = title  <span class="hljs-comment"># 按钮的标题或标识符</span>
+        self.rect = rect  <span class="hljs-comment"># 按钮的区域，pygame.Rect对象</span>
+        self.image = image  <span class="hljs-comment"># 按钮的图像，如果没有提供则使用文本标题</span>
+        self.font = pygame.font.Font(FONT_PATH, FONT_SIZE_MD)  <span class="hljs-comment"># 按钮文本的字体</span>
+        <span class="hljs-comment"># 如果没有提供图像，则创建一个表面并渲染文本标题</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.image:
+            self.image = pygame.Surface((self.rect.width, self.rect.height))
+            self.image.set_colorkey(COLOR[<span class="hljs-string">"black"</span>])
+            self.image.blit(self.font.render(self.title, <span class="hljs-literal">True</span>, COLOR[<span class="hljs-string">"text"</span>]), (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
+
+        self.pressed = <span class="hljs-literal">False</span>  <span class="hljs-comment"># 按钮的按下状态</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, mouse_press=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 更新按钮状态，根据鼠标点击事件设置按钮是否被按下</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface</span>):
+        <span class="hljs-comment"># 将按钮渲染到指定的Surface上</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_pressed</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 获取按钮是否被按下的状态</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Input</span>:
+    <span class="hljs-comment"># Input 类表示一个输入框，允许玩家输入文本</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, title, rect: pygame.Rect, image=<span class="hljs-literal">None</span>, color=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 初始化输入框的属性，包括标题、矩形区域、可选的图像和文本颜色</span>
+        self.title = title  <span class="hljs-comment"># 输入框的标题或标识符</span>
+        self.rect = rect  <span class="hljs-comment"># 输入框的区域，pygame.Rect对象</span>
+        self.image = image  <span class="hljs-comment"># 输入框的图像，如果没有提供则使用默认样式</span>
+        self.color = color  <span class="hljs-comment"># 输入文本的颜色</span>
+        self.active = <span class="hljs-literal">False</span>  <span class="hljs-comment"># 输入框的激活状态</span>
+        self.text = <span class="hljs-string">""</span>  <span class="hljs-comment"># 输入框当前的文本内容</span>
+        self.font = pygame.font.Font(FONT_PATH, FONT_SIZE_MD)  <span class="hljs-comment"># 输入框文本的字体</span>
+        <span class="hljs-comment"># 创建一个Surface对象用于渲染输入框</span>
+        self.render_surface = pygame.Surface((self.rect.width, self.rect.height))
+        self.render_surface.set_colorkey(COLOR[<span class="hljs-string">"black"</span>])
+        self.pre_render()  <span class="hljs-comment"># 预渲染输入框的初始状态</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, mouse_press=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 更新输入框的状态，根据鼠标点击事件设置是否激活</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_input</span>(<span class="hljs-params">self, <span class="hljs-built_in">input</span></span>):
+        <span class="hljs-comment"># 处理玩家的输入，更新输入框的文本内容</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface</span>):
+        <span class="hljs-comment"># 将输入框渲染到指定的Surface上</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">pre_render</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 预渲染输入框的文本和图像</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_text</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 获取输入框当前的文本内容</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Text</span>:
+    <span class="hljs-comment"># Text 类表示一段静态文本，用于显示信息或标签</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, title, text, color: <span class="hljs-built_in">tuple</span></span>):
+        <span class="hljs-comment"># 初始化文本对象的属性，包括标题、文本内容和文本颜色</span>
+        self.title = title  <span class="hljs-comment"># 文本的标题或标识符</span>
+        self.text = text  <span class="hljs-comment"># 文本内容</span>
+        self.font = pygame.font.Font(FONT_PATH, FONT_SIZE_MD)  <span class="hljs-comment"># 文本的字体</span>
+        <span class="hljs-comment"># 渲染文本并设置背景透明色键</span>
+        self.text_render = self.font.render(self.text, <span class="hljs-literal">True</span>, color, COLOR[<span class="hljs-string">"background"</span>])
+        self.rect = self.text_render.get_rect()  <span class="hljs-comment"># 文本的矩形区域</span>
+        <span class="hljs-comment"># 创建一个Surface对象用于渲染文本</span>
+        self.render_surface = pygame.Surface((self.rect.width, self.rect.height))
+        self.render_surface.set_colorkey(COLOR[<span class="hljs-string">"black"</span>])
+        self.render_surface.blit(self.text_render, (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>))  <span class="hljs-comment"># 将渲染的文本绘制到Surface上</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, mouse_press=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 更新文本的状态，如果需要响应鼠标事件，可以在这里处理</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface</span>):
+        <span class="hljs-comment"># 将文本渲染到指定的Surface上</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Menu</span>:
+    <span class="hljs-comment"># Menu 类表示一个菜单，包含标题、内容和可选的对齐方式</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, alignment=<span class="hljs-literal">None</span>, position=(<span class="hljs-params"><span class="hljs-number">0</span>, <span class="hljs-number">0</span></span>), title=<span class="hljs-string">""</span>, content=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 初始化菜单的属性，包括对齐方式、位置、标题和内容列表</span>
+        self.title = title  <span class="hljs-comment"># 菜单的标题</span>
+        self.content = content <span class="hljs-keyword">if</span> content <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">else</span> []  <span class="hljs-comment"># 菜单的内容列表</span>
+        self.content_space = <span class="hljs-number">15</span>  <span class="hljs-comment"># 内容项之间的间距</span>
+        self.font = pygame.font.Font(FONT_PATH, FONT_SIZE_MD)  <span class="hljs-comment"># 菜单文本的字体</span>
+        self.title_font = pygame.font.Font(FONT_PATH, <span class="hljs-number">30</span>)  <span class="hljs-comment"># 菜单标题的字体</span>
+        <span class="hljs-comment"># 渲染菜单标题并设置背景透明色键</span>
+        self.title_render = self.title_font.render(
+            self.title, <span class="hljs-literal">True</span>, COLOR[<span class="hljs-string">"text"</span>], COLOR[<span class="hljs-string">"background"</span>]
+        )
+        <span class="hljs-comment"># 计算菜单的宽度和高度</span>
+        self.width = self.title_render.get_width()
+        self.height = self.title_render.get_height() + self.content_space
+        <span class="hljs-comment"># 菜单的位置</span>
+        self.position = position
+        self.x, self.y = position
+        <span class="hljs-comment"># 如果设置了对齐方式，则根据窗口大小调整菜单位置</span>
+        self.alignment = alignment
+        <span class="hljs-keyword">if</span> self.alignment:
+            self.render_width, self.render_height = WINDOW_WIDTH, WINDOW_HEIGHT
+            self.render_dimensions = (self.render_width, self.render_height)
+            <span class="hljs-keyword">if</span> self.alignment == <span class="hljs-string">"center"</span>:
+                self.x = self.render_width / <span class="hljs-number">2</span> - self.width / <span class="hljs-number">2</span>
+                self.position = (self.x, self.y)
+        <span class="hljs-comment"># 初始化渲染Surface和矩形区域</span>
+        self.render_surface = <span class="hljs-literal">None</span>
+        self.rect = <span class="hljs-literal">None</span>
+        self.pre_render()  <span class="hljs-comment"># 预渲染菜单的布局和内容</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, <span class="hljs-built_in">input</span></span>):
+        <span class="hljs-comment"># 更新菜单的状态，处理用户输入和内容更新</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self, surface</span>):
+        <span class="hljs-comment"># 将菜单渲染到指定的Surface上</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_pressed</span>(<span class="hljs-params">self, title</span>):
+        <span class="hljs-comment"># 根据标题获取特定按钮的按下状态</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_text</span>(<span class="hljs-params">self, title</span>):
+        <span class="hljs-comment"># 根据标题获取特定输入框的文本内容</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">pre_render</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 预渲染菜单的布局和内容，包括标题和所有子项</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_content</span>(<span class="hljs-params">self, content, index=-<span class="hljs-number">1</span></span>):
+        <span class="hljs-comment"># 向菜单添加新的内容项，可以指定插入的位置</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">remove_content</span>(<span class="hljs-params">self, title</span>):
+        <span class="hljs-comment"># 根据标题移除菜单中的特定内容项</span>
+        <span class="hljs-keyword">pass</span>
+</code></pre><h4 id="SCENE（视窗模块）" data-id="SCENE（视窗模块）"><a class="anchor hidden-xs" href="#SCENE（视窗模块）" title="SCENE（视窗模块）"><span class="octicon octicon-link"></span></a><span>SCENE（视窗模块）</span></h4><p><span>SCENE 模块管理游戏中的不同场景，如主菜单、游戏玩法和结束画面。</span><br>
+<strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MainScene</span>:
+    <span class="hljs-comment"># MainScene 类是游戏主场景的基类，提供了基本的初始化和更新逻辑</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, map_path, team</span>):
+        <span class="hljs-comment"># 初始化主场景，设置下一场景、屏幕尺寸、字体、渲染表面、地图、玩家、阴影投射器和HUD</span>
+        self.next_scene = <span class="hljs-literal">None</span>
+        self.screen_width, self.screen_height = WINDOW_WIDTH, WINDOW_HEIGHT
+        self.screen_dimensions = (self.screen_width, self.screen_height)
+        <span class="hljs-comment"># 渲染尺寸与屏幕尺寸保持一致</span>
+        self.render_width, self.render_height = WINDOW_WIDTH, WINDOW_HEIGHT
+        self.render_dimensions = (self.render_width, self.render_height)
+        <span class="hljs-comment"># 初始化字体和渲染表面</span>
+        self.font = pygame.font.Font(FONT_PATH, FONT_SIZE_SM)
+        self.render_surface = pygame.Surface(self.render_dimensions)
+        <span class="hljs-comment"># 加载地图和创建玩家对象</span>
+        self.<span class="hljs-built_in">map</span> = <span class="hljs-built_in">map</span>.Map(map_path)
+        self.player = player.Player((<span class="hljs-number">4</span> * TILE_SIZE, <span class="hljs-number">3</span> * TILE_SIZE), self.<span class="hljs-built_in">map</span>, team)
+        <span class="hljs-comment"># 初始化阴影投射器和HUD</span>
+        self.shadow_caster = shadow_caster.ShadowCaster(self.player, self.<span class="hljs-built_in">map</span>)
+        self.hud = hud.Hud(self.player)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, surface, <span class="hljs-built_in">input</span></span>):
+        <span class="hljs-comment"># 更新主场景的逻辑，包括处理输入、渲染场景等</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_input</span>(<span class="hljs-params">self, <span class="hljs-built_in">input</span></span>):
+        <span class="hljs-comment"># 处理玩家的输入，例如按键或鼠标事件</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">HostScene</span>(<span class="hljs-title class_ inherited__">MainScene</span>):
+    <span class="hljs-comment"># HostScene 类表示作为主机的玩家场景，负责管理游戏会话和网络通信</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, port: <span class="hljs-built_in">int</span>, path, name, teams, own_team</span>):
+        <span class="hljs-comment"># 初始化主机场景，设置端口、路径、玩家名称、队伍信息等</span>
+        MainScene.__init__(self, path, own_team)
+        <span class="hljs-comment"># 主机场景特有的属性初始化</span>
+        self.name = name
+        self.teams = teams
+        self.own_team = own_team
+        self.map_path = path
+        self.message_splitter = <span class="hljs-string">""</span>.join(<span class="hljs-built_in">chr</span>(random.randint(<span class="hljs-number">33</span>, <span class="hljs-number">126</span>)) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))
+        self.clients = {}
+        self.addresses = {}
+        self.player_dictionary = {}
+        self.player_list = []
+        <span class="hljs-comment"># 设置服务器的IP、端口和缓冲区大小</span>
+        self.ip = <span class="hljs-string">""</span>
+        self.port = port
+        self.buffer_size = WINDOW_WIDTH  <span class="hljs-comment"># 这里应该是一个合适的缓冲区大小，而不是窗口宽度</span>
+        self.address = (self.ip, self.port)
+        <span class="hljs-comment"># 初始化并绑定服务器socket</span>
+        self.server = socket(AF_INET, SOCK_STREAM)
+        self.server.bind(self.address)
+        self.server.listen()
+        <span class="hljs-comment"># 启动接受新连接的线程</span>
+        self.accept_thread = threading.Thread(target=self.accept_new_connections)
+        self.accept_thread.start()
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, surface, <span class="hljs-built_in">input</span></span>):
+        <span class="hljs-comment"># 更新主机场景的逻辑</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">accept_new_connections</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 接受新的客户端连接</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">handle_client</span>(<span class="hljs-params">self, client</span>):
+        <span class="hljs-comment"># 处理客户端的连接和数据</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build_message</span>(<span class="hljs-params">self, message: <span class="hljs-built_in">dict</span></span>):
+        <span class="hljs-comment"># 构建要发送到客户端的消息</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">broadcast</span>(<span class="hljs-params">self, message: <span class="hljs-built_in">str</span></span>):
+        <span class="hljs-comment"># 广播消息给所有连接的客户端</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">stop</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 停止主机场景，关闭服务器连接和线程</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ClientScene</span>(<span class="hljs-title class_ inherited__">MainScene</span>):
+    <span class="hljs-comment"># ClientScene 类表示客户端玩家场景，负责管理客户端的网络通信</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, server_info=(<span class="hljs-params"><span class="hljs-string">"127.0.0.1"</span>, <span class="hljs-number">33000</span></span>), client_info=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-comment"># 初始化客户端场景，设置服务器信息和客户端信息</span>
+        self.ip = server_info[<span class="hljs-number">0</span>]
+        self.port = server_info[<span class="hljs-number">1</span>]
+        <span class="hljs-comment"># 初始化客户端的连接信息</span>
+        <span class="hljs-keyword">if</span> client_info <span class="hljs-keyword">is</span> <span class="hljs-literal">None</span>:
+            self.client_info = {<span class="hljs-string">"name"</span>: <span class="hljs-string">"name"</span>, <span class="hljs-string">"team"</span>: <span class="hljs-string">"team"</span>}
+        <span class="hljs-keyword">else</span>:
+            self.client_info = client_info
+        self.buffer_size = WINDOW_WIDTH  <span class="hljs-comment"># 同上，这里应该是一个合适的缓冲区大小</span>
+        self.address = (self.ip, self.port)
+        <span class="hljs-comment"># 初始化并连接到服务器的socket</span>
+        self.client_socket = socket(AF_INET, SOCK_STREAM)
+        self.client_socket.connect(self.address)
+        self.connected = <span class="hljs-literal">True</span>
+        <span class="hljs-comment"># 接收服务器发来的信息</span>
+        info = self.client_socket.recv(self.buffer_size).decode(<span class="hljs-string">"utf8"</span>)
+        info = json.loads(info)
+        path = info[<span class="hljs-string">"map"</span>]
+        self.message_splitter = info[<span class="hljs-string">"message_splitter"</span>]
+        self.own_index = info[<span class="hljs-string">"own_index"</span>]
+        <span class="hljs-comment"># 启动接收服务器消息的线程</span>
+        receive_thread = threading.Thread(target=self.receive)
+        receive_thread.start()
+        <span class="hljs-comment"># 调用基类的初始化方法</span>
+        MainScene.__init__(self, path, client_info[<span class="hljs-string">"team"</span>])
+        <span class="hljs-comment"># 初始化玩家列表</span>
+        self.player_list = []
+        <span class="hljs-keyword">for</span> i, p <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(info[<span class="hljs-string">"players"</span>]):
+            <span class="hljs-keyword">if</span> i != self.own_index:
+                new_player = player.RemotePlayer(self.<span class="hljs-built_in">map</span>, p[<span class="hljs-number">4</span>])
+                new_player.set_center(p[<span class="hljs-number">0</span>])
+                new_player.set_rotation(p[<span class="hljs-number">1</span>])
+                new_player.set_image(p[<span class="hljs-number">2</span>], p[<span class="hljs-number">3</span>])
+                self.player_list.append(new_player)
+            <span class="hljs-keyword">else</span>:
+                self.player_list.append(<span class="hljs-literal">None</span>)
+        <span class="hljs-comment"># 发送客户端信息到服务器</span>
+        self.send(self.build_message(self.client_info))
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self, surface, <span class="hljs-built_in">input</span></span>):
+        <span class="hljs-comment"># 更新客户端场景的逻辑</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">receive</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 接收服务器发送的消息</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">send</span>(<span class="hljs-params">self, message</span>):
+        <span class="hljs-comment"># 发送消息到服务器</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">send_info</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 发送客户端玩家的状态信息到服务器</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build_message</span>(<span class="hljs-params">self, message: <span class="hljs-built_in">dict</span></span>):
+        <span class="hljs-comment"># 构建要发送到服务器的消息</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">stop</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 停止客户端场景，关闭客户端连接</span>
+        <span class="hljs-keyword">pass</span>
+</code></pre><p><span>以上类的设计和代码示例展示了如何将游戏分解为可管理的组件，并确保每个类都有明确的职责。这种模块化的设计方法提高了代码的可读性、可维护性和可扩展性。</span></p><h3 id="25-项目难点与解决方案" data-id="25-项目难点与解决方案"><a class="anchor hidden-xs" href="#25-项目难点与解决方案" title="25-项目难点与解决方案"><span class="octicon octicon-link"></span></a><span>2.5 项目难点与解决方案</span></h3><h4 id="网络同步" data-id="网络同步"><a class="anchor hidden-xs" href="#网络同步" title="网络同步"><span class="octicon octicon-link"></span></a><span>网络同步</span></h4><p><strong><span>挑战：</span></strong><br>
+<span>在多人在线游戏中，实现高效且有序的网络同步是一大挑战。我们需要确保所有玩家都能实时接收到正确的游戏状态，同时保持低延迟。</span><br>
+<strong><span>解决方案：</span></strong><br>
+<span>为了解决这一问题，我们采用了 UDP 协议进行通信。UDP 提供了低延迟的数据传输，适合实时性要求高的游戏应用。同时，我们通过设计特定的消息分隔符，确保了消息的完整性和顺序性。</span><br>
+<strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-comment"># UDP通信套接字创建</span>
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+<span class="hljs-comment"># 发送游戏状态数据</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">send_game_state</span>(<span class="hljs-params">state_data</span>):
+    message = json.dumps(state_data) + MESSAGE_SPLITTER
+    sock.sendto(message.encode(), (server_ip, server_port))
+
+<span class="hljs-comment"># 接收并处理游戏状态数据</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">receive_game_state</span>():
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+        data, _ = sock.recvfrom(<span class="hljs-number">1024</span>)
+        game_state = json.loads(data.decode().split(MESSAGE_SPLITTER)[<span class="hljs-number">0</span>])
+        update_game_state(game_state)
+</code></pre><h4 id="阴影渲染" data-id="阴影渲染"><a class="anchor hidden-xs" href="#阴影渲染" title="阴影渲染"><span class="octicon octicon-link"></span></a><span>阴影渲染</span></h4><p><strong><span>挑战：</span></strong><br>
+<span>在游戏中实现逼真的阴影效果，可以提升游戏的视觉体验。然而，阴影的准确投射和渲染是一个技术难题。</span><br>
+<strong><span>解决方案：</span></strong><br>
+<span>参考了一个 GitHub 项目，该项目实现了一种简单的光线投射/跟踪算法。通过深入研究相关文章和方法，成功地将这一算法集成到我们的游戏中。</span><br>
+<strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-comment"># 阴影投射器初始化</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ShadowCaster</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, player, <span class="hljs-built_in">map</span></span>):
+        self.player = player
+        self.<span class="hljs-built_in">map</span> = <span class="hljs-built_in">map</span>
+        <span class="hljs-comment"># 初始化渲染表面和其他相关属性</span>
+
+    <span class="hljs-comment"># 更新阴影投射</span>
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update_shadows</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-comment"># 根据玩家位置和地图元素计算阴影</span>
+        <span class="hljs-comment"># 调用shadow_casting_algorithm进行阴影投射计算</span>
+
+<span class="hljs-comment"># 阴影投射算法（伪代码）</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">shadow_casting_algorithm</span>(<span class="hljs-params">player_position, map_elements</span>):
+    <span class="hljs-comment"># 计算玩家与地图元素之间的阴影投射</span>
+    <span class="hljs-comment"># 返回阴影多边形数据</span>
+</code></pre><h4 id="碰撞检测" data-id="碰撞检测"><a class="anchor hidden-xs" href="#碰撞检测" title="碰撞检测"><span class="octicon octicon-link"></span></a><span>碰撞检测</span></h4><p><strong><span>挑战：</span></strong><br>
+<span>精确的碰撞检测对于游戏玩法至关重要，它确保了游戏的交互性和物理反应的准确性。</span><br>
+<strong><span>解决方案：</span></strong><br>
+<span>我们使用Pygame的碰撞掩码功能来实现碰撞检测。为每个游戏对象创建了一个掩码，通过这些掩码来检测对象之间的碰撞。</span><br>
+<strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-comment"># 创建游戏对象的掩码</span>
+player_mask = pygame.mask.from_surface(player_image)
+
+<span class="hljs-comment"># 碰撞检测</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">check_collision</span>(<span class="hljs-params">object1, object2</span>):
+    <span class="hljs-keyword">return</span> object1.mask.overlap(object2.mask, (object1.rect.x - object2.rect.x, object1.rect.y - object2.rect.y))
+
+<span class="hljs-comment"># 游戏循环中的碰撞检测</span>
+<span class="hljs-keyword">for</span> entity <span class="hljs-keyword">in</span> game_entities:
+    <span class="hljs-keyword">if</span> check_collision(player, entity):
+        handle_collision(player, entity)
+</code></pre><h2 id="三、功能展示" data-id="三、功能展示"><a class="anchor hidden-xs" href="#三、功能展示" title="三、功能展示"><span class="octicon octicon-link"></span></a><span>三、功能展示</span></h2><p><span>进入游戏后主菜单有三个按钮，分别是 主持游戏 、加入游戏 和 设定。</span><br>
+<span>在左上角会显示当前游戏的 FPS。</span><br>
+<img src="https://hackmd.io/_uploads/ryDHCaMSR.png" alt="image" class="offline-handled error-handled" loading="lazy"></p><p><span>点击 主持游戏 按钮后，可设定游戏的端口。</span><br>
+<img src="https://hackmd.io/_uploads/SkX8C6fS0.png" alt="image" class="offline-handled error-handled" loading="lazy"></p><p><span>接着可以设定你的玩家名称、设置队伍数量与选择当前要加入的队伍。</span><br>
+<img src="https://hackmd.io/_uploads/B1CU0azBR.png" alt="image" class="offline-handled error-handled" loading="lazy"></p><p><span>其他玩家可以通过输入 IP 和端口号加入目标游戏房间。</span><br>
+<img src="https://hackmd.io/_uploads/H17CR6zHA.png" alt="image" class="offline-handled error-handled" loading="lazy"></p><p><span>同样可以输入玩家名称，以及选择要加入的队伍。</span><br>
+<img src="https://hackmd.io/_uploads/S19TA6zS0.png" alt="image" class="offline-handled error-handled" loading="lazy"></p><p><span>加入后就即可看见玩家彼此。</span><br>
+<span>玩家可通过鼠标滚轮切换武器，通过 WASD 进行角色移动，通过鼠标左键进行射击，拖动鼠标即可实现人物转向，同时在左上角提供当前玩家的角度显示。</span><br>
+<span>步枪的伤害是半颗心，长压左键可实现连射。手枪的伤害是一颗心，仅能单点射击。小刀的伤害是一颗心，仅能在极近的距离造成伤害。</span><br>
+<img src="https://hackmd.io/_uploads/By-6CpMHC.png" alt="image" class="offline-handled error-handled" loading="lazy"></p><p><span>射击的画面演示：</span><br>
+<img src="https://hackmd.io/_uploads/B1puApzH0.png" alt="image" class="offline-handled error-handled" loading="lazy"></p><p><span>换弹的画面演示：</span><br>
+<img src="https://hackmd.io/_uploads/HJyhCazB0.png" alt="image" class="offline-handled error-handled" loading="lazy"></p><h2 id="四、小结" data-id="四、小结"><a class="anchor hidden-xs" href="#四、小结" title="四、小结"><span class="octicon octicon-link"></span></a><span>四、小结</span></h2><h3 id="41-未来改进方向" data-id="41-未来改进方向"><a class="anchor hidden-xs" href="#41-未来改进方向" title="41-未来改进方向"><span class="octicon octicon-link"></span></a><span>4.1 未来改进方向</span></h3><h4 id="可扩展性" data-id="可扩展性"><a class="anchor hidden-xs" href="#可扩展性" title="可扩展性"><span class="octicon octicon-link"></span></a><span>可扩展性</span></h4><p><span>为了确保项目能够适应未来的发展和变化，需要构建一个具有高度可扩展性的系统。这包括设计模块化的代码库、使用松耦合的组件，以及编写可复用的代码。</span></p><p><strong><span>改进措施：</span></strong></p><ul>
+<li><span>模块化设计：将游戏分解为多个独立的模块，如渲染系统、物理引擎、网络管理等，以便于单独更新和扩展。</span></li>
+<li><span>插件架构：实现一个插件系统，允许开发者通过添加新的插件来引入新功能。</span></li>
+</ul><p><strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-comment"># 模块化设计示例</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">GameModule</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, game</span>):
+        self.game = game
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">update</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">render</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># 插件系统架构示例</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">PluginManager</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.plugins = []
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_plugin</span>(<span class="hljs-params">self, plugin</span>):
+        self.plugins.append(plugin)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">run_plugins</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">for</span> plugin <span class="hljs-keyword">in</span> self.plugins:
+            plugin.run()
+</code></pre><h4 id="防作弊机制" data-id="防作弊机制"><a class="anchor hidden-xs" href="#防作弊机制" title="防作弊机制"><span class="octicon octicon-link"></span></a><span>防作弊机制</span></h4><p><span>为维护游戏的公平性，需要建立一套防作弊机制，防止玩家通过不正当手段修改游戏数据。</span></p><p><strong><span>改进措施：</span></strong></p><ul>
+<li><span>服务器验证：在服务器端实现数据验证逻辑，确保所有客户端发送的数据都经过严格检查。</span></li>
+<li><span>加密通信：使用加密技术对客户端和服务器之间的通信进行加密，防止数据被截获和篡改。</span></li>
+</ul><p><strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-comment"># 服务器端验证示例</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">validate_data</span>(<span class="hljs-params">data</span>):
+    <span class="hljs-keyword">if</span> is_data_correct(data):
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">raise</span> CheatingDetected(<span class="hljs-string">"Invalid data received."</span>)
+
+<span class="hljs-comment"># 加密通信示例</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">send_encrypted_message</span>(<span class="hljs-params">message</span>):
+    encrypted_message = encrypt(message)
+    self.socket.send(encrypted_message)
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">receive_encrypted_message</span>():
+    encrypted_message = self.socket.recv()
+    message = decrypt(encrypted_message)
+    <span class="hljs-keyword">return</span> message
+</code></pre><h4 id="多线程和并发控制" data-id="多线程和并发控制"><a class="anchor hidden-xs" href="#多线程和并发控制" title="多线程和并发控制"><span class="octicon octicon-link"></span></a><span>多线程和并发控制</span></h4><p><span>多线程编程可以显著提升性能，但需要妥善处理线程安全和并发问题。</span></p><p><strong><span>改进措施：</span></strong></p><ul>
+<li><span>线程同步：使用锁（Locks）、信号量（Semaphores）等同步机制来避免竞态条件和死锁。</span></li>
+<li><span>线程池：使用线程池来管理线程的创建和销毁，减少线程创建的开销。</span></li>
+</ul><p><strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-comment"># 线程同步示例</span>
+<span class="hljs-keyword">from</span> threading <span class="hljs-keyword">import</span> Lock
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ThreadSafeCounter</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.counter = <span class="hljs-number">0</span>
+        self.lock = Lock()
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">increment</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-keyword">with</span> self.lock:
+            self.counter += <span class="hljs-number">1</span>
+
+<span class="hljs-comment"># 线程池示例</span>
+<span class="hljs-keyword">from</span> concurrent.futures <span class="hljs-keyword">import</span> ThreadPoolExecutor
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">task_function</span>(<span class="hljs-params">x</span>):
+    <span class="hljs-keyword">return</span> x * x
+
+<span class="hljs-keyword">with</span> ThreadPoolExecutor(max_workers=<span class="hljs-number">5</span>) <span class="hljs-keyword">as</span> executor:
+    futures = [executor.submit(task_function, x) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)]
+    results = [future.result() <span class="hljs-keyword">for</span> future <span class="hljs-keyword">in</span> futures]
+</code></pre><h4 id="用户体验和可访问性" data-id="用户体验和可访问性"><a class="anchor hidden-xs" href="#用户体验和可访问性" title="用户体验和可访问性"><span class="octicon octicon-link"></span></a><span>用户体验和可访问性</span></h4><p><span>提供良好的用户体验和可访问性是游戏成功的关键。</span></p><p><strong><span>改进措施：</span></strong></p><ul>
+<li><span>界面可调：允许玩家调整界面大小、颜色对比度等，以适应不同玩家的需求。</span></li>
+<li><span>自定义快捷键：允许玩家自定义快捷键，提高游戏的可玩性。</span></li>
+</ul><p><strong><span>代码示例：</span></strong></p><pre><code class="python hljs"><span class="hljs-comment"># 界面可调示例</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">AdjustableInterface</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, scale=<span class="hljs-number">1.0</span>, contrast=<span class="hljs-number">1.0</span></span>):
+        self.scale = scale
+        self.contrast = contrast
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">apply_scale</span>(<span class="hljs-params">self, surface</span>):
+        <span class="hljs-comment"># 根据scale调整surface的大小</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">adjust_contrast</span>(<span class="hljs-params">self, surface</span>):
+        <span class="hljs-comment"># 根据contrast调整surface的对比度</span>
+        <span class="hljs-keyword">pass</span>
+
+<span class="hljs-comment"># 自定义快捷键示例</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">KeybindManager</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        self.keybinds = {}
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">set_keybind</span>(<span class="hljs-params">self, action, key</span>):
+        self.keybinds[action] = key
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_keybind</span>(<span class="hljs-params">self, action</span>):
+        <span class="hljs-keyword">return</span> self.keybinds.get(action, <span class="hljs-literal">None</span>)
+</code></pre><h3 id="42-小结" data-id="42-小结"><a class="anchor hidden-xs" href="#42-小结" title="42-小结"><span class="octicon octicon-link"></span></a><span>4.2 小结</span></h3><p><span>在技术层面，我们采用了 UDP 协议进行网络同步，确保了数据传输的效率和实时性。同时，通过引入阴影渲染算法，增强了游戏的视觉真实感。此外，利用 Pygame 的碰撞掩码功能，我们实现了精确的碰撞检测。</span></p><p><span>项目在设计上注重模块化和可扩展性，为未来的功能拓展和优化打下了基础。在用户体验方面，后续考虑了防作弊机制、多线程并发控制以及界面可访问性，以提供公平、流畅且包容的游戏体验。</span></p><p><span>针对项目当前的成果和存在的不足，我们提出了一系列改进措施，包括增强可扩展性、实现防作弊机制、优化多线程并发控制以及提升用户体验和可访问性。我们相信，通过不断的迭代和优化，本项目有潜力发展成为一个成熟且受欢迎的游戏。</span></p><p><span>本项目不仅是对 Pygame 游戏开发能力的一次探索，也是对问题解决能力的一次考验。期待将所学知识和技能应用到更广泛的领域，为游戏开发社区贡献力量。随着技术的不断进步和游戏行业的蓬勃发展，相信通过持续的学习和创新，能够克服任何挑战，创造出更多激动人心的游戏作品。</span></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li><a href="#Python-期末论文" title="Python 期末论文">Python 期末论文</a><ul class="nav">
+<li><a href="#一、项目简介" title="一、项目简介">一、项目简介</a><ul class="nav">
+<li><a href="#11-项目背景" title="1.1 项目背景">1.1 项目背景</a></li>
+<li><a href="#12-项目目标" title="1.2 项目目标">1.2 项目目标</a></li>
+</ul>
+</li>
+<li><a href="#二、详细设计和关键技术" title="二、详细设计和关键技术">二、详细设计和关键技术</a><ul class="nav">
+<li><a href="#21-项目开发与维护工具" title="2.1 项目开发与维护工具">2.1 项目开发与维护工具</a></li>
+<li><a href="#22-项目结构设计" title="2.2 项目结构设计">2.2 项目结构设计</a></li>
+<li><a href="#23-素材制作与设计" title="2.3 素材制作与设计">2.3 素材制作与设计</a></li>
+<li><a href="#24-类结构设计" title="2.4 类结构设计">2.4 类结构设计</a></li>
+<li><a href="#25-项目难点与解决方案" title="2.5 项目难点与解决方案">2.5 项目难点与解决方案</a></li>
+</ul>
+</li>
+<li><a href="#三、功能展示" title="三、功能展示">三、功能展示</a></li>
+<li><a href="#四、小结" title="四、小结">四、小结</a><ul class="nav">
+<li><a href="#41-未来改进方向" title="4.1 未来改进方向">4.1 未来改进方向</a></li>
+<li><a href="#42-小结" title="4.2 小结">4.2 小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
+        <div class="toc"><ul class="nav">
+<li><a href="#Python-期末论文" title="Python 期末论文">Python 期末论文</a><ul class="nav">
+<li><a href="#一、项目简介" title="一、项目简介">一、项目简介</a><ul class="nav">
+<li><a href="#11-项目背景" title="1.1 项目背景">1.1 项目背景</a></li>
+<li><a href="#12-项目目标" title="1.2 项目目标">1.2 项目目标</a></li>
+</ul>
+</li>
+<li><a href="#二、详细设计和关键技术" title="二、详细设计和关键技术">二、详细设计和关键技术</a><ul class="nav">
+<li><a href="#21-项目开发与维护工具" title="2.1 项目开发与维护工具">2.1 项目开发与维护工具</a></li>
+<li><a href="#22-项目结构设计" title="2.2 项目结构设计">2.2 项目结构设计</a></li>
+<li><a href="#23-素材制作与设计" title="2.3 素材制作与设计">2.3 素材制作与设计</a></li>
+<li><a href="#24-类结构设计" title="2.4 类结构设计">2.4 类结构设计</a></li>
+<li><a href="#25-项目难点与解决方案" title="2.5 项目难点与解决方案">2.5 项目难点与解决方案</a></li>
+</ul>
+</li>
+<li><a href="#三、功能展示" title="三、功能展示">三、功能展示</a></li>
+<li><a href="#四、小结" title="四、小结">四、小结</a><ul class="nav">
+<li><a href="#41-未来改进方向" title="4.1 未来改进方向">4.1 未来改进方向</a></li>
+<li><a href="#42-小结" title="4.2 小结">4.2 小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
